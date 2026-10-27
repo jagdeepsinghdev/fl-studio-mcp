@@ -35,11 +35,15 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: fl-studio-mcp/dist/*
+          path: |
+            fl-studio-mcp/dist/*.whl
+            fl-studio-mcp/dist/*.tar.gz
       - uses: softprops/action-gh-release@v2
         with:
           body_path: notes.md
-          files: fl-studio-mcp/dist/*
+          files: |
+            fl-studio-mcp/dist/*.whl
+            fl-studio-mcp/dist/*.tar.gz
 
   pypi:
     # Needs one-time setup: on PyPI add a pending "trusted publisher" for project mcp-flstudio
