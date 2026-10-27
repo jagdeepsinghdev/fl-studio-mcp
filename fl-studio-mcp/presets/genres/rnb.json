@@ -1,0 +1,32 @@
+{
+  "id": "rnb",
+  "name": "R&B",
+  "bpm": 80,
+  "swing": 0.15,
+  "bars": 4,
+  "key": "Eb major",
+  "beat": "rnb",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "IV7",
+      "iii7",
+      "ii7",
+      "I7"
+    ],
+    "quality": "7",
+    "rhythm": "half",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

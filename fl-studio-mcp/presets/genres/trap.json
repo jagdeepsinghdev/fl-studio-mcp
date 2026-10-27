@@ -1,0 +1,32 @@
+{
+  "id": "trap",
+  "name": "Trap",
+  "bpm": 140,
+  "swing": 0.0,
+  "bars": 4,
+  "key": "G minor",
+  "beat": "trap",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "i",
+      "VI",
+      "III",
+      "VII"
+    ],
+    "quality": "triad",
+    "rhythm": "whole",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (tempo/key: skills/fl-genres; progression: generic genre shape)"
+}

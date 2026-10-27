@@ -1,0 +1,150 @@
+{
+  "name": "vocal-clean-stock",
+  "status": "convention, not auditioned; knob names UNVERIFIED (run fl_vocal learn, then fix the param lists)",
+  "source": "TRIFREEZE stock-plugin chain (skills/fl-mixing/references/vocal-chain.md \u00a71)",
+  "track_role": "Main vocals A",
+  "chain": [
+    {
+      "step": "autotune",
+      "plugin": "Pitcher",
+      "params": [
+        {
+          "param": [
+            "Speed",
+            "Retune speed",
+            "Correction speed"
+          ],
+          "value": 0.75
+        }
+      ],
+      "note": "key/scale set by hand in Pitcher (piano keys); fast speed = hard effect, medium = natural"
+    },
+    {
+      "step": "body",
+      "plugin": "Maximus",
+      "preset": "Soundgoodizer presets/a",
+      "note": "preset only; for deep voices lower the LOW band a little"
+    },
+    {
+      "step": "cleanup_eq",
+      "plugin": "Fruity Parametric EQ 2",
+      "params": [
+        {
+          "param": [
+            "Band 1 freq",
+            "Freq 1",
+            "Band 1 frequency"
+          ],
+          "target": "100 Hz"
+        }
+      ],
+      "note": "band 1 = low cut; raise until the voice loses body, then back off"
+    },
+    {
+      "step": "box_eq",
+      "plugin": "Fruity Parametric EQ 2",
+      "params": [
+        {
+          "param": [
+            "Band 3 freq",
+            "Freq 3"
+          ],
+          "target": "350 Hz"
+        },
+        {
+          "param": [
+            "Band 3 level",
+            "Level 3",
+            "Band 3 gain"
+          ],
+          "target": "-3 dB"
+        }
+      ],
+      "note": "sweep 200-500 Hz for boxiness; the number is a start, not a fix"
+    },
+    {
+      "step": "comp",
+      "plugin": "Fruity Limiter",
+      "params": [
+        {
+          "param": [
+            "Comp ratio",
+            "Ratio"
+          ],
+          "target": "4:1"
+        },
+        {
+          "param": [
+            "Comp knee",
+            "Knee"
+          ],
+          "target": "50%"
+        },
+        {
+          "param": [
+            "Comp attack time",
+            "Comp attack",
+            "Attack"
+          ],
+          "target": "5 ms"
+        },
+        {
+          "param": [
+            "Comp threshold",
+            "Threshold",
+            "Comp thres"
+          ],
+          "target": "-18 dB"
+        }
+      ],
+      "note": "2:1 natural .. 6:1 aggressive; 3-10 dB gain reduction; makeup gain to match bypass level"
+    },
+    {
+      "step": "dynamic_deharsh",
+      "plugin": "Maximus",
+      "preset": "De-esser narrow-band",
+      "note": "used as dynamic resonance control on the top band: tune its band to the harshest range"
+    },
+    {
+      "step": "tone_eq",
+      "plugin": "Fruity Parametric EQ 2",
+      "note": "style: brighter (boost top) vs darker (cut top) - by ear"
+    },
+    {
+      "step": "glue_comp",
+      "plugin": "Fruity Limiter",
+      "params": [
+        {
+          "param": [
+            "Comp ratio",
+            "Ratio"
+          ],
+          "target": "1.5:1"
+        },
+        {
+          "param": [
+            "Comp attack time",
+            "Comp attack",
+            "Attack"
+          ],
+          "target": "6 ms"
+        },
+        {
+          "param": [
+            "Comp threshold",
+            "Threshold",
+            "Comp thres"
+          ],
+          "target": "-30 dB"
+        }
+      ],
+      "note": "threshold MUST sit below the vocal's peak or it does nothing"
+    },
+    {
+      "step": "deess",
+      "plugin": "Patcher",
+      "preset": "Intelligent De-Esser",
+      "note": "after compression on sibilant mics; leave-highs up, inspect, range, sensitivity"
+    }
+  ]
+}

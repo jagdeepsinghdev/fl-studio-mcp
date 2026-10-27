@@ -1,0 +1,32 @@
+{
+  "id": "future-bass",
+  "name": "Future bass",
+  "bpm": 150,
+  "swing": 0.0,
+  "bars": 4,
+  "key": "F major",
+  "beat": "future-bass",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "vi",
+      "IV",
+      "I",
+      "V"
+    ],
+    "quality": "7",
+    "rhythm": "stab",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

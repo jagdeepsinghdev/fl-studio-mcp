@@ -1,0 +1,80 @@
+{
+  "id": "boom-bap",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/MA PlasticBox Kick 03.wv",
+      "flavour": "kick_dusty",
+      "part": "kick",
+      "channel": "Kick BOOMBAP",
+      "features": {
+        "cen": 74.6,
+        "click": 0.0036,
+        "dur": 0.232,
+        "low": 0.98,
+        "peak": 1.0
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA Straight Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA Hard Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/MA PlasticBox Kick 01.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/MA Duck Snare.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare BOOMBAP",
+      "features": {
+        "cen": 2541.7,
+        "click": 0.8394,
+        "dur": 0.298,
+        "low": 0.243,
+        "peak": 1.675
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/MA Trunk Snare 02.wv",
+        "Drums (ModeAudio)/Snares/MA Thunk Snare 02.wv",
+        "Drums (ModeAudio)/Snares/MA FrightNight Snare 01.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/MA Halloween Clap.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap BOOMBAP",
+      "features": {
+        "cen": 2254.1,
+        "click": 0.9716,
+        "dur": 0.398,
+        "low": 0.001,
+        "peak": 1.49
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/MA GreenDream Clap.wv",
+        "Drums (ModeAudio)/Claps/MA ElegantScent Clap.wv",
+        "Drums (ModeAudio)/Claps/MA Taurus Clap.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Downstream CHat 08.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat BOOMBAP",
+      "features": {
+        "cen": 6127.0,
+        "click": 0.9714,
+        "dur": 0.084,
+        "low": 0.0,
+        "peak": 0.998
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 07.wv",
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 12.wv",
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 09.wv"
+      ]
+    }
+  }
+}

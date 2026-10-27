@@ -1,0 +1,93 @@
+{
+ "id": "romantic-minimal",
+ "name": "Romantic / minimal (soft kick, clap on 3, airy hats, 117 BPM)",
+ "bpm": 117,
+ "length_beats": 4,
+ "channels": {
+  "kick": {
+   "name": "808 Kick",
+   "pattern": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "clap": {
+   "name": "808 Clap",
+   "pattern": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "hat": {
+   "name": "808 HiHat",
+   "pattern": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  "snare": {
+   "name": "808 Snare",
+   "pattern": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "notes": "Minimal drums that leave room for a guitar/piano lead. 1-bar loop here (beat presets are 16 steps). The 16-bar version used with the Guitar_Melody_2 (Empire) D-minor sample: fl_write_drums(kick=[[1],[1,11]]*8, clap=[9], hat=[5,13], bars=16). Channel levels used: kick 0.45, clap 0.3, hats 0.25, snare 0.3 (set via fl_exec_python channels.setChannelVolume). Pairs with melodies/dm-soothing-piano. From convention, auditioned only by the owner."
+}

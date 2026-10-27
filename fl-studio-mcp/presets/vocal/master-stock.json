@@ -1,0 +1,18 @@
+{
+  "name": "master-stock",
+  "status": "convention, not auditioned; knob names UNVERIFIED",
+  "source": "TRIFREEZE master chain (mastering-stock.md); apply on track 0",
+  "target_lufs": -8.0,
+  "chain": [
+    {"step": "tone_eq", "plugin": "Fruity Parametric EQ 2", "note": "match the reference: smooth highs, trim lows"},
+    {"step": "mid_side", "plugin": "Patcher", "preset": "mid", "note": "mid/side EQ; trim side lows"},
+    {"step": "peak_comp", "plugin": "Fruity Limiter",
+     "params": [{"param": ["Comp ratio", "Ratio"], "target": "2:1"},
+                {"param": ["Comp knee", "Knee"], "target": "80%"}],
+     "note": "threshold just under the tallest peaks; slow-ish attack/release"},
+    {"step": "match_eq", "plugin": "Fruity Parametric EQ 2", "note": "remove mid-range the reference doesn't have"},
+    {"step": "width", "plugin": "Fruity Stereo Enhancer", "note": "widen only to the reference's width"},
+    {"step": "loud", "plugin": "Maximus",
+     "note": "lows centred, mids/highs wider; threshold down a hair; pre/post up to just before crackle; saturation on"}
+  ]
+}

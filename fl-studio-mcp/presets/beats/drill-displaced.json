@@ -1,0 +1,94 @@
+{
+  "id": "drill-displaced",
+  "name": "UK Drill — displaced snare (2-bar, 140 BPM)",
+  "bpm": 140,
+  "swing": 0.15,
+  "length_beats": 8,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "notes": "2026-09-30: originally a 2-bar (32-step) pattern; the step-sequencer preset format holds one bar (16 steps) per channel, which FL repeats over the pattern length. Bar-2 content (hat fill at the end, extra kick/snare/clap hits) is not representable here — keep this as bar 1 only, or re-author as note events."
+}

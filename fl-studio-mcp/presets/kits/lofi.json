@@ -1,0 +1,134 @@
+{
+  "id": "lofi",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/MA Straight Kick.wv",
+      "flavour": "kick_dusty",
+      "part": "kick",
+      "channel": "Kick LOFI",
+      "features": {
+        "cen": 47.7,
+        "click": 0.0063,
+        "dur": 0.257,
+        "low": 0.993,
+        "peak": 1.001
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA Hard Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/MA PlasticBox Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/MA Round Kick 01.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Downstream Snare 13.wv",
+      "flavour": "snare_soft",
+      "part": "snare",
+      "channel": "Snare LOFI",
+      "features": {
+        "cen": 2160.9,
+        "click": 0.2467,
+        "dur": 0.384,
+        "low": 0.003,
+        "peak": 1.008
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Downstream Snare 08.wv",
+        "Drums (ModeAudio)/Snares/Downstream Snare 10.wv",
+        "Drums (ModeAudio)/Snares/Downstream Snare 09.wv"
+      ]
+    },
+    "rim": {
+      "file": "Drums (ModeAudio)/Rims/Hyper HouseParty Rim.wv",
+      "flavour": "rim",
+      "part": null,
+      "channel": "Rim LOFI",
+      "features": {
+        "cen": 1076.8,
+        "click": 0.6568,
+        "dur": 0.095,
+        "low": 0.0,
+        "peak": 1.042
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Rims/MA Cirrus Rim 02.wv",
+        "Drums (ModeAudio)/Rims/HouseGen Rim 10.wv",
+        "Drums (ModeAudio)/Rims/Fracture Rim 09.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Downstream CHat 12.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat LOFI",
+      "features": {
+        "cen": 5458.1,
+        "click": 0.7732,
+        "dur": 0.07,
+        "low": 0.003,
+        "peak": 1.01
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 09.wv",
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 08.wv",
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 07.wv"
+      ]
+    },
+    "shaker": {
+      "file": "Drums (ModeAudio)/Shakers/MA LanternLight Shaker.wv",
+      "flavour": "shaker",
+      "part": null,
+      "channel": "Shaker LOFI",
+      "features": {
+        "cen": 4523.1,
+        "click": 0.9999,
+        "dur": 0.146,
+        "low": 0.0,
+        "peak": 1.526
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Shakers/Attack Shaker 10.wv",
+        "Drums (ModeAudio)/Shakers/Attack Shaker 04.wv",
+        "Drums (ModeAudio)/Shakers/Attack Shaker 08.wv"
+      ],
+      "pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

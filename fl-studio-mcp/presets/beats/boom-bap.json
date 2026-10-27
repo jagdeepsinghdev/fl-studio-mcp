@@ -1,0 +1,25 @@
+{
+  "id": "boom-bap",
+  "name": "Boom Bap",
+  "bpm": 90,
+  "swing": 0.57,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+    }
+  },
+  "notes": "Kick on 1, 'a' of 2, 'and' of 3. Hard snare on 2 and 4 (steps 5, 13). Straight 8th hats. Swing is essential: 55-60%."
+}

@@ -1,0 +1,26 @@
+{
+  "id": "drill",
+  "name": "UK Drill (off-beat kick, 140 BPM)",
+  "bpm": 140,
+  "swing": 0.15,
+  "length_beats": 4,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    }
+  },
+  "notes": "UK drill: off-beat kicks (beat 1, 'and' of 2, 'and' of 3) for the head-nod bounce; snare+clap on beat 3 only (half-time); full 16th hats. Pair with the drill-c-minor melody preset (8 beats) — see presets/README.md 'The one golden rule'."
+}

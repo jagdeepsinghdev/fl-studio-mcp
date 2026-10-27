@@ -1,0 +1,32 @@
+{
+  "id": "pop",
+  "name": "Pop",
+  "bpm": 118,
+  "swing": 0.0,
+  "bars": 4,
+  "key": "C major",
+  "beat": "pop",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "I",
+      "V",
+      "vi",
+      "IV"
+    ],
+    "quality": "triad",
+    "rhythm": "half",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "pulse8",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "lofi",
+  "name": "Lofi",
+  "bpm": 80,
+  "swing": 0.2,
+  "bars": 4,
+  "key": "D dorian",
+  "beat": "lofi",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "i9",
+      "IV9"
+    ],
+    "quality": "9",
+    "rhythm": "whole",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (tempo/key: skills/fl-genres; progression: generic genre shape)"
+}

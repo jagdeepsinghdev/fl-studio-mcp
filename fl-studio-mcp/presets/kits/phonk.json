@@ -1,0 +1,116 @@
+{
+  "id": "phonk",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Power ShortKick 02.wv",
+      "flavour": "kick_sub",
+      "part": "kick",
+      "channel": "Kick PHONK",
+      "features": {
+        "cen": 35.1,
+        "click": 0.0007,
+        "dur": 0.808,
+        "low": 1.0,
+        "peak": 0.984
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Volt CleanKick 20.wv",
+        "Drums (ModeAudio)/Kicks/Volt SatKick 19.wv",
+        "Drums (ModeAudio)/Kicks/Volt SatKick 08.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Power Snare 14.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare PHONK",
+      "features": {
+        "cen": 2079.2,
+        "click": 0.3574,
+        "dur": 0.317,
+        "low": 0.001,
+        "peak": 1.558
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Power Snare 02.wv",
+        "Drums (ModeAudio)/Snares/Power Snare 27.wv",
+        "Drums (ModeAudio)/Snares/Power Snare 25.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Power Clap 12.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap PHONK",
+      "features": {
+        "cen": 2333.3,
+        "click": 0.8998,
+        "dur": 0.367,
+        "low": 0.0,
+        "peak": 1.778
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Volt CleanClap 11.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 07.wv",
+        "Drums (ModeAudio)/Claps/Volt CleanClapSnare 10.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Power CHat 01.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat PHONK",
+      "features": {
+        "cen": 6680.7,
+        "click": 0.9533,
+        "dur": 0.049,
+        "low": 0.0,
+        "peak": 1.161
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Power CHat 02.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 13.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 07.wv"
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/Attack AnalogBell 02.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc PHONK",
+      "features": {
+        "cen": 963.1,
+        "click": 0.1797,
+        "dur": 0.254,
+        "low": 0.0,
+        "peak": 1.003
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/Attack AnalogBell 01.wv",
+        "Drums (ModeAudio)/Percussion/Attack WoodBlock 02.wv",
+        "Drums (ModeAudio)/Percussion/MA GoldenGates Perc.wv"
+      ],
+      "pattern": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "afrobeats",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Attack Kick 57.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick AFRO",
+      "features": {
+        "cen": 56.8,
+        "click": 0.0017,
+        "dur": 0.287,
+        "low": 0.99,
+        "peak": 1.001
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA Round Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 51.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 62.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Rims/Fracture Rim 14.wv",
+      "flavour": "rim",
+      "part": "snare",
+      "channel": "Snare AFRO",
+      "features": {
+        "cen": 1125.4,
+        "click": 0.2555,
+        "dur": 0.119,
+        "low": 0.018,
+        "peak": 1.267
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Rims/Fracture Rim 09.wv",
+        "Drums (ModeAudio)/Rims/Fracture Rim 07.wv",
+        "Drums (ModeAudio)/Rims/Volt SatRim 01.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Attack Clap 25.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap AFRO",
+      "features": {
+        "cen": 1970.2,
+        "click": 0.9935,
+        "dur": 0.325,
+        "low": 0.0,
+        "peak": 1.199
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Attack Clap 14.wv",
+        "Drums (ModeAudio)/Claps/Attack Clap 20.wv",
+        "Drums (ModeAudio)/Claps/Attack Clap 03.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/MA PanFry Hat.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat AFRO",
+      "features": {
+        "cen": 5513.6,
+        "click": 0.992,
+        "dur": 0.103,
+        "low": 0.0,
+        "peak": 0.814
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/MA Stargazer CHat.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 05.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 06.wv"
+      ]
+    },
+    "shaker": {
+      "file": "Drums (ModeAudio)/Shakers/Attack Shaker 10.wv",
+      "flavour": "shaker",
+      "part": null,
+      "channel": "Shaker AFRO",
+      "features": {
+        "cen": 5648.9,
+        "click": 0.9994,
+        "dur": 0.19,
+        "low": 0.0,
+        "peak": 1.043
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Shakers/Attack Shaker 04.wv",
+        "Drums (ModeAudio)/Shakers/Attack Shaker 08.wv",
+        "Drums (ModeAudio)/Shakers/MA LanternLight Shaker.wv"
+      ],
+      "pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/Collider Sub Conga 02.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc AFRO",
+      "features": {
+        "cen": 982.2,
+        "click": 0.1568,
+        "dur": 0.205,
+        "low": 0.019,
+        "peak": 1.417
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/Collider Sub Conga 04.wv",
+        "Drums (ModeAudio)/Percussion/Collider Sub Conga 03.wv",
+        "Drums (ModeAudio)/Percussion/Attack WoodBlock 02.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    }
+  }
+}

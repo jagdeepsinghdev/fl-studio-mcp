@@ -1,0 +1,96 @@
+# === System / OS ===
+.DS_Store
+Thumbs.db
+
+# === Python (the fl-studio-mcp venv & caches) ===
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# uv.lock is COMMITTED: it's the source of truth for reproducible builds. CI runs
+# `uv sync` (locked) so the exact same packages resolve on every build. The inner
+# fl-studio-mcp/.gitignore also ignores it — remove it there too, or the unified
+# repo's `git add` will skip the file. (Both rules removed; see below.)
+# (kept: nothing — uv.lock is now tracked)
+
+# === Secrets / local config (never commit) ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+.netrc
+
+# === Large binaries (use GitHub LFS or a release if you ever need them) ===
+assets/*.mp4
+*.mp4
+*.mov
+*.flp
+*.flp.bak
+# audio (rule 9/10): renders, downloads, loops; test fixtures are force-added
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aif
+*.aiff
+*.zip
+# model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+# sample folders dropped at the repo root while building around a sample
+/drums/
+
+# === Build output ===
+dist/
+build/
+node_modules/
+fl-studio-mcp/.generated/
+
+# === FL Studio local runtime state (lives in ~/Documents, but ignore if ever staged) ===
+mcp_command.json
+mcp_response.json
+piano_roll_state.json
+mcp_request.json
+mcp_audit.jsonl
+.mcp_script_session.json
+
+# === Editor / tooling ===
+.claude/
+.idea/
+.vscode/
+
+# music-learning-app is a SEPARATE app with its own git repo (split 2026-10-26, history
+# kept). It may sit here on disk; this repo is the FL Studio MCP server only.
+music-learning-app/
+*.sf2
+
+# pi agent runtime (npm package cache for extensions/skills)
+.pi/
+FL-PATTERN-SAMPLING-PLAN.html
+.refs/
+.playwright-mcp/
+
+# Splice preview downloads (rule 10: never commit song/audio material)
+*_preview.mp3
+*_preview.wav
+
+# Song-derived presets: private learning only, never in the shared repo (kept on disk)
+fl-studio-mcp/presets/beats/baby-shark.json
+fl-studio-mcp/presets/melodies/baby-shark.json
+fl-studio-mcp/presets/beats/cheques-*.json
+fl-studio-mcp/presets/melodies/cheques-*.json
+# maintainer-only skill (fetches Splice previews without login) - not shipped
+skills/splice-sample/

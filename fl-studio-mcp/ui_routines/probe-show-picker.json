@@ -1,0 +1,22 @@
+{
+  "description": "EXPERIMENT: learn what the undocumented ui.showPicker does. Selects a mixer track, calls showPicker with `picker_args`, records focus/popup state, then closes with escape. Never sends enter.",
+  "status": "experimental",
+  "vars": {
+    "track": {"type": "int"},
+    "picker_args": {"default": []}
+  },
+  "steps": [
+    {"call": "mixer.setTrackNumber", "args": ["{track}"]},
+    {"wait": 0.2},
+    {"read": "ui.getFocusedFormCaption", "as": "caption_before"},
+    {"call": "ui.showPicker", "args": "{picker_args}"},
+    {"wait": 0.5},
+    {"read": "ui.isInPopupMenu", "as": "popup_after"},
+    {"read": "ui.getFocusedFormCaption", "as": "caption_after"},
+    {"read": "ui.getFocusedFormID", "as": "form_id_after"},
+    {"read": "ui.getHintMsg", "as": "hint_after"},
+    {"call": "ui.escape"},
+    {"wait": 0.3},
+    {"read": "ui.isInPopupMenu", "as": "popup_closed"}
+  ]
+}

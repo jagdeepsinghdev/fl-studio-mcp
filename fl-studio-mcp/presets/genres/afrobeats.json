@@ -1,0 +1,32 @@
+{
+  "id": "afrobeats",
+  "name": "Afrobeats",
+  "bpm": 104,
+  "swing": 0.12,
+  "bars": 4,
+  "key": "A major",
+  "beat": "afrobeats",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "I",
+      "IV",
+      "vi",
+      "V"
+    ],
+    "quality": "triad",
+    "rhythm": "offbeat",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "offbeat",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

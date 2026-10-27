@@ -1,0 +1,116 @@
+{
+  "id": "rnb",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/MA Round Kick 01.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick RNB",
+      "features": {
+        "cen": 51.8,
+        "click": 0.0018,
+        "dur": 0.264,
+        "low": 0.986,
+        "peak": 0.938
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA Arcade Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA PlasticBox Kick 02.wv",
+        "Drums (ModeAudio)/Kicks/MA Planet Kick.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/MA Cosmonaut Snare.wv",
+      "flavour": "snare_soft",
+      "part": "snare",
+      "channel": "Snare RNB",
+      "features": {
+        "cen": 1879.8,
+        "click": 0.7722,
+        "dur": 0.26,
+        "low": 0.001,
+        "peak": 1.383
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/MA GoldenGates Snare.wv",
+        "Drums (ModeAudio)/Snares/MA FoxHound Snare.wv",
+        "Drums (ModeAudio)/Snares/MA Trunk Snare 01.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Undercover Clap 02.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap RNB",
+      "features": {
+        "cen": 3301.6,
+        "click": 0.9273,
+        "dur": 0.311,
+        "low": 0.001,
+        "peak": 1.293
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/MA GreenDream Clap.wv",
+        "Drums (ModeAudio)/Claps/MA ElegantScent Clap.wv",
+        "Drums (ModeAudio)/Claps/MA Taurus Clap.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Downstream CHat 09.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat RNB",
+      "features": {
+        "cen": 5590.0,
+        "click": 0.9968,
+        "dur": 0.065,
+        "low": 0.003,
+        "peak": 1.027
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/MA Constellations Hat.wv",
+        "Drums (ModeAudio)/Hi Hats/MA ElegantScent CHat.wv",
+        "Drums (ModeAudio)/Hi Hats/MA Hyperion CHat.wv"
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/MA GoldenGates Perc.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc RNB",
+      "features": {
+        "cen": 1234.1,
+        "click": 0.5255,
+        "dur": 0.251,
+        "low": 0.001,
+        "peak": 1.414
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/Attack AnalogBell 01.wv",
+        "Drums (ModeAudio)/Percussion/Attack AnalogBell 02.wv",
+        "Drums (ModeAudio)/Percussion/Attack WoodBlock 02.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

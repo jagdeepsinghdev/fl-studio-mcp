@@ -1,0 +1,28 @@
+name: Bug report
+description: A tool failed, timed out, or did something unexpected in FL Studio
+labels: [bug]
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: "fl-studio-mcp version, FL Studio version/edition, macOS version"
+      placeholder: "0.1.0, FL Studio 2026 26.1.6 Producer, macOS 26.5"
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: Include the tool call (name + arguments) and the error text.
+    validations: {required: true}
+  - type: textarea
+    id: state
+    attributes:
+      label: "`fl_state` and `fl_connect(\"doctor\")` output"
+      render: json
+  - type: textarea
+    id: audit
+    attributes:
+      label: Last lines of `mcp_audit.jsonl`
+      description: "In ~/Documents/Image-Line/FL Studio/Settings/Piano roll scripts/. Remove anything private."
+      render: json

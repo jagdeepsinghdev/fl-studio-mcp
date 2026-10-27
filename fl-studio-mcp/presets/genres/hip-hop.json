@@ -1,0 +1,32 @@
+{
+  "id": "hip-hop",
+  "name": "Hip-hop (modern)",
+  "bpm": 95,
+  "swing": 0.1,
+  "bars": 4,
+  "key": "A minor",
+  "beat": "hip-hop",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "i",
+      "VI",
+      "III",
+      "VII"
+    ],
+    "quality": "triad",
+    "rhythm": "whole",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

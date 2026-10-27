@@ -1,0 +1,25 @@
+{
+  "id": "house",
+  "name": "House (four-on-the-floor)",
+  "bpm": 124,
+  "swing": 0.0,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+    }
+  },
+  "notes": "Four-on-the-floor kick, clap on 2 and 4 (5,13), open hat on every off-beat (3,7,11,15). Add closed 16th hats underneath for drive."
+}

@@ -1,0 +1,25 @@
+{
+  "id": "lofi",
+  "name": "Lo-fi (chill, sparse)",
+  "bpm": 80,
+  "swing": 0.6,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+    }
+  },
+  "notes": "Relaxed: kick on 1 and the 'and' of 3, snare on 2 and 4. Low velocities; soft hats slightly late. Swing 58-62%. Warm Rhodes/piano chord pads over the top."
+}

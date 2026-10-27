@@ -1,0 +1,135 @@
+{
+ "plugin": "Fruity Delay 3",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Input wet",
+   "value_string": "100.0%"
+  },
+  {
+   "index": 1,
+   "name": "Delay type",
+   "value_string": "Fake Stereo"
+  },
+  {
+   "index": 2,
+   "name": "Tempo sync",
+   "value_string": "Off"
+  },
+  {
+   "index": 3,
+   "name": "Keep pitch",
+   "value_string": "Off"
+  },
+  {
+   "index": 4,
+   "name": "Time",
+   "value_string": "4.6ms"
+  },
+  {
+   "index": 5,
+   "name": "Delay time R/L offset",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 6,
+   "name": "Time smooth",
+   "value_string": "50.0%"
+  },
+  {
+   "index": 7,
+   "name": "Stereo spread",
+   "value_string": "100.0%"
+  },
+  {
+   "index": 8,
+   "name": "Modulation rate",
+   "value_string": "1.1Hz"
+  },
+  {
+   "index": 9,
+   "name": "Modulation time",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 10,
+   "name": "Modulation cutoff",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 11,
+   "name": "Diffusion level",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 12,
+   "name": "Diffusion spread",
+   "value_string": "50.0%"
+  },
+  {
+   "index": 13,
+   "name": "Distortion type",
+   "value_string": "Limit"
+  },
+  {
+   "index": 14,
+   "name": "Feedback level",
+   "value_string": "62.5%"
+  },
+  {
+   "index": 15,
+   "name": "Filter mode",
+   "value_string": "LP"
+  },
+  {
+   "index": 16,
+   "name": "Feedback cutoff",
+   "value_string": "1299.6Hz"
+  },
+  {
+   "index": 17,
+   "name": "Feedback resonance",
+   "value_string": "50.0%"
+  },
+  {
+   "index": 18,
+   "name": "Distortion",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 19,
+   "name": "Distortion",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 20,
+   "name": "Distortion",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 21,
+   "name": "Rate reduction",
+   "value_string": "Max Hz"
+  },
+  {
+   "index": 22,
+   "name": "Bits reduction",
+   "value_string": "Max bits"
+  },
+  {
+   "index": 23,
+   "name": "Output wet",
+   "value_string": "100.0%"
+  },
+  {
+   "index": 24,
+   "name": "Output tone",
+   "value_string": "0.0%"
+  },
+  {
+   "index": 25,
+   "name": "Output dry",
+   "value_string": "100.0%"
+  }
+ ]
+}

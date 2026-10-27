@@ -1,0 +1,153 @@
+{
+  "id": "drill-keys-c-minor",
+  "name": "Drill keys \u2014 C minor (Cm-Ab-Fm-G stabs + bell top line)",
+  "key": "C minor",
+  "bpm": 140,
+  "channel": "Acoustic Piano",
+  "length_beats": 8,
+  "melody": [
+    {
+      "note": 79,
+      "step": 0,
+      "dur": 2,
+      "vel": 96
+    },
+    {
+      "note": 77,
+      "step": 3,
+      "dur": 1,
+      "vel": 96
+    },
+    {
+      "note": 75,
+      "step": 4,
+      "dur": 3,
+      "vel": 96
+    },
+    {
+      "note": 72,
+      "step": 10,
+      "dur": 4,
+      "vel": 96
+    },
+    {
+      "note": 75,
+      "step": 14,
+      "dur": 2,
+      "vel": 96
+    },
+    {
+      "note": 77,
+      "step": 16,
+      "dur": 2,
+      "vel": 96
+    },
+    {
+      "note": 79,
+      "step": 19,
+      "dur": 1,
+      "vel": 96
+    },
+    {
+      "note": 82,
+      "step": 20,
+      "dur": 4,
+      "vel": 96
+    },
+    {
+      "note": 79,
+      "step": 26,
+      "dur": 2,
+      "vel": 96
+    },
+    {
+      "note": 77,
+      "step": 28,
+      "dur": 4,
+      "vel": 96
+    }
+  ],
+  "chords": [
+    {
+      "notes": [
+        60,
+        63,
+        67,
+        72
+      ],
+      "step": 0,
+      "dur": 3
+    },
+    {
+      "notes": [
+        60,
+        63,
+        67,
+        72
+      ],
+      "step": 6,
+      "dur": 2
+    },
+    {
+      "notes": [
+        60,
+        63,
+        68,
+        72
+      ],
+      "step": 8,
+      "dur": 3
+    },
+    {
+      "notes": [
+        60,
+        63,
+        68,
+        72
+      ],
+      "step": 14,
+      "dur": 2
+    },
+    {
+      "notes": [
+        60,
+        65,
+        68,
+        72
+      ],
+      "step": 16,
+      "dur": 3
+    },
+    {
+      "notes": [
+        60,
+        65,
+        68,
+        72
+      ],
+      "step": 22,
+      "dur": 2
+    },
+    {
+      "notes": [
+        59,
+        62,
+        67,
+        71
+      ],
+      "step": 24,
+      "dur": 3
+    },
+    {
+      "notes": [
+        59,
+        62,
+        67,
+        71
+      ],
+      "step": 30,
+      "dur": 2
+    }
+  ],
+  "notes": "2026-10-01: replaces drill-c-minor on the keys channel. i-VI-iv-V in C minor (the old 'Am' is not diatonic to C minor); voicings C4-C5 and a C5-Bb5 top line instead of the C2-G2 bass line, which belongs on an 808 (drill-808-c-minor). Two short stabs per chord, no overlapping sustains. Pair with the 'drill' beat in an 8-beat pattern."
+}

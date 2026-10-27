@@ -1,0 +1,116 @@
+{
+  "id": "trap",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/MA MachineCity Kick.wv",
+      "flavour": "kick_sub",
+      "part": "kick",
+      "channel": "Kick TRAP",
+      "features": {
+        "cen": 50.5,
+        "click": 0.0005,
+        "dur": 0.951,
+        "low": 0.999,
+        "peak": 1.415
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA DirtTracks Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA ElegantScent Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA Minimal Kick 04.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Power Snare 02.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare TRAP",
+      "features": {
+        "cen": 2373.8,
+        "click": 0.0562,
+        "dur": 0.372,
+        "low": 0.119,
+        "peak": 1.514
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Power Snare 27.wv",
+        "Drums (ModeAudio)/Snares/Power Snare 25.wv",
+        "Drums (ModeAudio)/Snares/MA Thunk Snare 02.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Power Clap 06.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap TRAP",
+      "features": {
+        "cen": 1849.0,
+        "click": 0.7467,
+        "dur": 0.239,
+        "low": 0.0,
+        "peak": 1.761
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Power Clap 10.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 20.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 09.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Power CHat 02.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat TRAP",
+      "features": {
+        "cen": 6242.7,
+        "click": 0.9868,
+        "dur": 0.051,
+        "low": 0.0,
+        "peak": 1.302
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Power CHat 13.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 07.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 17.wv"
+      ]
+    },
+    "ohat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Power OHat 16.wv",
+      "flavour": "ohat",
+      "part": null,
+      "channel": "Open Hat TRAP",
+      "features": {
+        "cen": 7091.8,
+        "click": 0.9967,
+        "dur": 0.446,
+        "low": 0.0,
+        "peak": 1.387
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Power OHat 02.wv",
+        "Drums (ModeAudio)/Hi Hats/Power OHat 04.wv",
+        "Drums (ModeAudio)/Hi Hats/Power OHat 01.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

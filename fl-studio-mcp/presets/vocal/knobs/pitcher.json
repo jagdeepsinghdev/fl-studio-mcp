@@ -1,0 +1,10 @@
+{
+ "plugin": "Pitcher",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Correction Speed",
+   "value_string": "-"
+  }
+ ]
+}

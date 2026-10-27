@@ -1,0 +1,25 @@
+{
+  "id": "punjabi-banger",
+  "name": "Punjabi banger (dhol-flavored, driving pop/rap beat)",
+  "bpm": 96,
+  "swing": 0.12,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1]
+    }
+  },
+  "notes": "Punjabi banger @ 96 BPM. Driving four-on-the-floor-ish kick with a 3+2 syncopation (the 'dhol' push on the off-beats), snare+clap on 2 and 4 with an extra clap on the 'and' of beat 2 and 4 (that metallic dhol snap), and busy open-ish 16th hats with a couple of ghost gaps for movement. Use ~12% swing for that desi bounce. Pair with a FLEX/Keys or a dhol sample on the piano channel for the toori/flute hook."
+}

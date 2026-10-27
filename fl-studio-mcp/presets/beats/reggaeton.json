@@ -1,0 +1,21 @@
+{
+  "id": "reggaeton",
+  "name": "Reggaeton (dembow)",
+  "bpm": 95,
+  "swing": 0.0,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+    }
+  },
+  "notes": "Kick on every beat (1,5,9,13). Dembow snare in 3+3+2 (4,7,12,15). 8th hats. Bass stabs on the kicks via the bass channel."
+}

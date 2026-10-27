@@ -1,0 +1,116 @@
+{
+  "id": "punjabi",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Power ShortKick 13.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick PUNJABI",
+      "features": {
+        "cen": 60.6,
+        "click": 0.002,
+        "dur": 0.276,
+        "low": 0.995,
+        "peak": 1.002
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Power ShortKick 19.wv",
+        "Drums (ModeAudio)/Kicks/MA Round Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/MA Arcade Kick.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/MA Trunk Snare 02.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare PUNJABI",
+      "features": {
+        "cen": 2451.9,
+        "click": 0.2307,
+        "dur": 0.29,
+        "low": 0.009,
+        "peak": 1.483
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/MA Thunk Snare 02.wv",
+        "Drums (ModeAudio)/Snares/MA FrightNight Snare 01.wv",
+        "Drums (ModeAudio)/Snares/MA Hieroglyph Snare.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Power Clap 07.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap PUNJABI",
+      "features": {
+        "cen": 1894.8,
+        "click": 0.8431,
+        "dur": 0.242,
+        "low": 0.0,
+        "peak": 1.891
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Power Clap 06.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 10.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 20.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/MA Stargazer CHat.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat PUNJABI",
+      "features": {
+        "cen": 5475.3,
+        "click": 0.879,
+        "dur": 0.103,
+        "low": 0.009,
+        "peak": 1.473
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/MA Constellations Hat.wv",
+        "Drums (ModeAudio)/Hi Hats/MA ElegantScent CHat.wv",
+        "Drums (ModeAudio)/Hi Hats/MA Hyperion CHat.wv"
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/Attack WoodBlock 02.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc PUNJABI",
+      "features": {
+        "cen": 1037.5,
+        "click": 0.995,
+        "dur": 0.27,
+        "low": 0.0,
+        "peak": 1.469
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/Attack WoodBlock 01.wv",
+        "Drums (ModeAudio)/Percussion/Volt CleanClave 02.wv",
+        "Drums (ModeAudio)/Percussion/Volt CleanClave 07.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    }
+  }
+}

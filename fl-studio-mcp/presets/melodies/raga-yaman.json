@@ -1,0 +1,33 @@
+{
+  "id": "raga-yaman",
+  "name": "Raga Yaman (E Phrygian dominant) — Hijaz line",
+  "key": "D",
+  "bpm": 90,
+  "scale": "D raga Yaman (E Phrygian dominant): D Eb F# G A Bb C D",
+  "channel": "Piano",
+  "melody": [
+    {"note": 62, "step": 0,  "dur": 1, "vel": 88},
+    {"note": 63, "step": 2,  "dur": 1, "vel": 70},
+    {"note": 66, "step": 4,  "dur": 1, "vel": 84},
+    {"note": 67, "step": 6,  "dur": 1, "vel": 66},
+    {"note": 69, "step": 8,  "dur": 1, "vel": 88},
+    {"note": 70, "step": 10, "dur": 1, "vel": 62},
+    {"note": 72, "step": 12, "dur": 1, "vel": 84},
+    {"note": 69, "step": 14, "dur": 2, "vel": 90}
+  ],
+  "chords": [
+    {"notes": [50, 53, 57, 62], "step": 0,  "dur": 4},
+    {"notes": [48, 52, 55, 60], "step": 4,  "dur": 4},
+    {"notes": [46, 50, 53, 58], "step": 8,  "dur": 4},
+    {"notes": [50, 55, 58, 62], "step": 12, "dur": 4}
+  ],
+  "notes": "Raga Yaman = E Phrygian dominant (the Arabic/Indian 'Hijaz' flavor). The half-step (Eb) and raised 4th (F#) give it the cinematic Eastern sound. Chords: Dm7b5 -> Cm7 -> Bb7 -> A7 (the standard Hijaz loop). Best on FLEX with a piano or strings patch; add light delay/reverb.",
+  "style": "cinematic",
+  "length_beats": 4,
+  "chord_truth": [
+    {"beat": 0, "beats": 1, "chord": "D:min"},
+    {"beat": 1, "beats": 1, "chord": "C:maj"},
+    {"beat": 2, "beats": 1, "chord": "A#:maj"},
+    {"beat": 3, "beats": 1, "chord": "G:min"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "flstudio": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "fl-studio-mcp",
+        "fl-studio-mcp"
+      ]
+    }
+  }
+}

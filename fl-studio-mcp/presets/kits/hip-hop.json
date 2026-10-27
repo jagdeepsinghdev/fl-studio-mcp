@@ -1,0 +1,80 @@
+{
+  "id": "hip-hop",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Power ShortKick 16.wv",
+      "flavour": "kick_dusty",
+      "part": "kick",
+      "channel": "Kick HIPHOP",
+      "features": {
+        "cen": 81.3,
+        "click": 0.0048,
+        "dur": 0.241,
+        "low": 0.947,
+        "peak": 1.001
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Power ShortKick 19.wv",
+        "Drums (ModeAudio)/Kicks/Power ShortKick 08.wv",
+        "Drums (ModeAudio)/Kicks/MA Straight Kick.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Power Snare 34.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare HIPHOP",
+      "features": {
+        "cen": 2500.7,
+        "click": 0.4837,
+        "dur": 0.257,
+        "low": 0.0,
+        "peak": 1.752
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/MA Trunk Snare 02.wv",
+        "Drums (ModeAudio)/Snares/MA Thunk Snare 02.wv",
+        "Drums (ModeAudio)/Snares/MA FrightNight Snare 01.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Power Clap 01.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap HIPHOP",
+      "features": {
+        "cen": 2605.6,
+        "click": 0.8514,
+        "dur": 0.299,
+        "low": 0.0,
+        "peak": 1.516
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Power Clap 12.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 07.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 06.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Downstream CHat 07.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat HIPHOP",
+      "features": {
+        "cen": 5916.7,
+        "click": 0.952,
+        "dur": 0.08,
+        "low": 0.001,
+        "peak": 1.089
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 12.wv",
+        "Drums (ModeAudio)/Hi Hats/MA Stargazer CHat.wv",
+        "Drums (ModeAudio)/Hi Hats/Downstream CHat 09.wv"
+      ]
+    }
+  }
+}

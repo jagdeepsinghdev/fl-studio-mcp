@@ -1,0 +1,2203 @@
+{
+ "source": "https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/basics_shortcuts.htm",
+ "notes": [
+  "Mac mapping: Ctrl->cmd, Alt->opt. Mouse gestures are omitted (keys only).",
+  "priority: 1 = core beat/song-making speed, 2 = useful, 3 = rare/dialog/unreachable. list sorts by it.",
+  "reach=no: bare or shift-only letters/digits do not reach FL from macOS (live 2026-10-04) - refused unless confirm=true (re-test).",
+  "Edit `status` to 'verified YYYY-MM-DD' or 'no_effect YYYY-MM-DD' after a live test.",
+  "risk: view|toggle run freely; edit needs the context proof; confirm needs confirm=true."
+ ],
+ "shortcuts": [
+  {
+   "id": "undo",
+   "keys": "cmd+z",
+   "context": "global",
+   "action": "Undo/Redo last edit",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "undo_step",
+   "keys": "cmd+opt+z",
+   "context": "global",
+   "action": "Undo step-by-step",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "save",
+   "keys": "cmd+s",
+   "context": "global",
+   "action": "Save file",
+   "risk": "edit",
+   "status": "untested",
+   "prefer": "fl_file(action='save')",
+   "priority": 1
+  },
+  {
+   "id": "save_new_version",
+   "keys": "cmd+n",
+   "context": "global",
+   "action": "Save new version",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "save_as",
+   "keys": "cmd+shift+s",
+   "context": "global",
+   "action": "Save As... (native dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_file(action='save_as')",
+   "not_in": [
+    "mixer"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "open_file",
+   "keys": "cmd+o",
+   "context": "global",
+   "action": "Open file (native dialog; replaces session)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_file(action='open')",
+   "priority": 3
+  },
+  {
+   "id": "export_wav",
+   "keys": "cmd+r",
+   "context": "global",
+   "action": "Export wave file (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_file(action='export')",
+   "priority": 3
+  },
+  {
+   "id": "export_mp3",
+   "keys": "cmd+shift+r",
+   "context": "global",
+   "action": "Export mp3 file (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_file(action='export')",
+   "priority": 3
+  },
+  {
+   "id": "export_midi",
+   "keys": "cmd+shift+m",
+   "context": "global",
+   "action": "Export MIDI file (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "arrange_windows",
+   "keys": "cmd+shift+h",
+   "context": "global",
+   "action": "(Re)arrange windows",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "play_stop",
+   "keys": "space",
+   "context": "global",
+   "action": "Start/Stop playback",
+   "risk": "toggle",
+   "status": "untested",
+   "prefer": "fl_transport(action='play'|'stop')",
+   "priority": 2
+  },
+  {
+   "id": "play_pause",
+   "keys": "cmd+space",
+   "context": "global",
+   "action": "Start/Pause playback",
+   "risk": "toggle",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "pattern_song_mode",
+   "keys": "l",
+   "context": "global",
+   "action": "Switch Pattern/Song mode",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "prefer": "fl_transport(action='loop')",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "record_toggle",
+   "keys": "r",
+   "context": "global",
+   "action": "Switch recording on/off",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "prefer": "fl_transport(action='record')",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "snap_toggle",
+   "keys": "backspace",
+   "context": "global",
+   "action": "Toggle Line/None snap",
+   "risk": "toggle",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getSnapMode"
+   },
+   "priority": 1
+  },
+  {
+   "id": "blend_notes",
+   "keys": "cmd+b",
+   "context": "global",
+   "action": "Toggle blend notes",
+   "risk": "toggle",
+   "status": "untested",
+   "not_in": [
+    "piano_roll",
+    "playlist"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "step_edit",
+   "keys": "cmd+e",
+   "context": "global",
+   "action": "Toggle Step Edit mode",
+   "risk": "toggle",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getStepEditMode"
+   },
+   "priority": 1
+  },
+  {
+   "id": "panic",
+   "keys": "cmd+h",
+   "context": "global",
+   "action": "Stop sound (panic) - on macOS Cmd+H may HIDE FL instead",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "wait_for_input",
+   "keys": "cmd+i",
+   "context": "global",
+   "action": "Toggle wait-for-input recording start",
+   "risk": "toggle",
+   "status": "untested",
+   "not_in": [
+    "piano_roll"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "metronome",
+   "keys": "cmd+m",
+   "context": "global",
+   "action": "Toggle metronome",
+   "risk": "toggle",
+   "status": "untested",
+   "not_in": [
+    "piano_roll"
+   ],
+   "priority": 1
+  },
+  {
+   "id": "precount",
+   "keys": "cmd+p",
+   "context": "global",
+   "action": "Toggle recording metronome precount",
+   "risk": "toggle",
+   "status": "untested",
+   "not_in": [
+    "playlist"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "typing_keyboard",
+   "keys": "cmd+t",
+   "context": "global",
+   "action": "Toggle typing keyboard to piano",
+   "risk": "toggle",
+   "status": "untested",
+   "not_in": [
+    "playlist"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "next_bar",
+   "keys": "num_star",
+   "context": "global",
+   "action": "Next bar (song mode)",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "prev_bar",
+   "keys": "num_slash",
+   "context": "global",
+   "action": "Previous bar (song mode)",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "next_pattern",
+   "keys": "num_plus",
+   "context": "global",
+   "action": "Next pattern",
+   "risk": "view",
+   "status": "untested",
+   "prefer": "fl_pattern(action='select')",
+   "priority": 1
+  },
+  {
+   "id": "prev_pattern",
+   "keys": "num_minus",
+   "context": "global",
+   "action": "Previous pattern",
+   "risk": "view",
+   "status": "untested",
+   "prefer": "fl_pattern(action='select')",
+   "priority": 1
+  },
+  {
+   "id": "next_empty_pattern",
+   "keys": "cmd+F4",
+   "context": "global",
+   "action": "Next empty pattern (may open the name dialog, CLAUDE.md 2.4)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_pattern(action='create')",
+   "priority": 3
+  },
+  {
+   "id": "next_empty_pattern_named",
+   "keys": "F4",
+   "context": "global",
+   "action": "Next empty pattern with naming dialog",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_pattern(action='create')",
+   "priority": 3
+  },
+  {
+   "id": "rename_pattern",
+   "keys": "F2",
+   "context": "global",
+   "action": "Pattern name editor (text field; typing does not reach it)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_pattern(action='rename')",
+   "not_in": [
+    "mixer"
+   ],
+   "priority": 3
+  },
+  {
+   "id": "tool_selector",
+   "keys": "F3",
+   "context": "global",
+   "action": "Open tool selector for active window",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist",
+   "keys": "F5",
+   "context": "global",
+   "action": "Toggle Playlist",
+   "risk": "view",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getVisible",
+    "args": [
+     2
+    ],
+    "or_focused": "playlist"
+   },
+   "priority": 1
+  },
+  {
+   "id": "channel_rack",
+   "keys": "F6",
+   "context": "global",
+   "action": "Toggle Channel rack",
+   "risk": "view",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getVisible",
+    "args": [
+     1
+    ],
+    "or_focused": "channel_rack"
+   },
+   "priority": 1
+  },
+  {
+   "id": "piano_roll",
+   "keys": "F7",
+   "context": "global",
+   "action": "Toggle Piano roll",
+   "risk": "view",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getVisible",
+    "args": [
+     3
+    ],
+    "or_focused": "piano_roll"
+   },
+   "priority": 1
+  },
+  {
+   "id": "plugin_picker",
+   "keys": "F8",
+   "context": "global",
+   "action": "Open Plugin Picker",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "sample_browser",
+   "keys": "opt+F8",
+   "context": "global",
+   "action": "Show/hide Browser",
+   "risk": "view",
+   "status": "untested",
+   "verify": {
+    "changes": "ui.getVisible",
+    "args": [
+     4
+    ],
+    "or_focused": "browser"
+   },
+   "priority": 2
+  },
+  {
+   "id": "mixer",
+   "keys": "F9",
+   "context": "global",
+   "action": "Show/hide Mixer",
+   "risk": "view",
+   "status": "verified 2026-10-04",
+   "verify": {
+    "changes": "ui.getVisible",
+    "args": [
+     0
+    ],
+    "or_focused": "mixer"
+   },
+   "priority": 1
+  },
+  {
+   "id": "midi_settings",
+   "keys": "F10",
+   "context": "global",
+   "action": "Show/hide MIDI settings",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "song_info",
+   "keys": "F11",
+   "context": "global",
+   "action": "Show/hide song info window",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3,
+   "note": "opens Project settings; a second F11 does NOT close it (esc/close by hand)"
+  },
+  {
+   "id": "close_all_windows",
+   "keys": "F12",
+   "context": "global",
+   "action": "Close all windows",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "cycle_windows",
+   "keys": "tab",
+   "context": "global",
+   "action": "Cycle nested windows",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "close_window",
+   "keys": "esc",
+   "context": "global",
+   "action": "Close a window",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist_max_min",
+   "keys": "return",
+   "context": "global",
+   "action": "Toggle Max/Min Playlist",
+   "risk": "view",
+   "status": "untested",
+   "not_in": [
+    "browser"
+   ],
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.select_up",
+   "keys": "up",
+   "context": "channel_rack",
+   "action": "Select channel above",
+   "risk": "view",
+   "status": "verified 2026-10-04 (4 presses: selected channel 4 -> 0, fl_state)",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.select_down",
+   "keys": "down",
+   "context": "channel_rack",
+   "action": "Select channel below",
+   "risk": "view",
+   "status": "sent-ok 2026-10-04 (focus proven; no oracle for the effect)",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.next_group",
+   "keys": "pgup",
+   "context": "channel_rack",
+   "action": "Select next channel group",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.prev_group",
+   "keys": "pgdn",
+   "context": "channel_rack",
+   "action": "Select previous channel group",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.selection_up",
+   "keys": "shift+up",
+   "context": "channel_rack",
+   "action": "Move channel selection up",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.selection_down",
+   "keys": "shift+down",
+   "context": "channel_rack",
+   "action": "Move channel selection down",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.clone",
+   "keys": "opt+c",
+   "context": "channel_rack",
+   "action": "Clone selected channels",
+   "risk": "edit",
+   "status": "untested",
+   "prefer": "fl_channel(action='clone')",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.delete",
+   "keys": "opt+fwddel",
+   "context": "channel_rack",
+   "action": "Delete selected channel(s)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_delete(target='channel')",
+   "priority": 3
+  },
+  {
+   "id": "channel_rack.move_down",
+   "keys": "opt+down",
+   "context": "channel_rack",
+   "action": "Move selected channel(s) down",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.move_up",
+   "keys": "opt+up",
+   "context": "channel_rack",
+   "action": "Move selected channel(s) up",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.group",
+   "keys": "opt+g",
+   "context": "channel_rack",
+   "action": "Group selected channels",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.mixer_selectors",
+   "keys": "opt+m",
+   "context": "channel_rack",
+   "action": "Toggle mixer track selectors",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.unzip",
+   "keys": "opt+u",
+   "context": "channel_rack",
+   "action": "Unzip selected channel(s)",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.zip",
+   "keys": "opt+z",
+   "context": "channel_rack",
+   "action": "Zip selected channel(s)",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.restretch_audio",
+   "keys": "cmd+opt+r",
+   "context": "channel_rack",
+   "action": "Force restretch of all audio clip channels",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.copy_steps",
+   "keys": "cmd+c",
+   "context": "channel_rack",
+   "action": "Copy channel steps/score",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.paste_steps",
+   "keys": "cmd+v",
+   "context": "channel_rack",
+   "action": "Paste channel steps/score",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.cut_steps",
+   "keys": "cmd+x",
+   "context": "channel_rack",
+   "action": "Cut channel steps/score",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.route_free_track",
+   "keys": "cmd+l",
+   "context": "channel_rack",
+   "action": "Route selected channel(s) to free mixer track(s)",
+   "risk": "edit",
+   "status": "untested",
+   "prefer": "fl_channel(action='route')",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.focus_playlist",
+   "keys": "cmd+return",
+   "context": "channel_rack",
+   "action": "Focus Playlist",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "channel_rack.shift_steps_left",
+   "keys": "shift+cmd+left",
+   "context": "channel_rack",
+   "action": "Shift steps left",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "channel_rack.shift_steps_right",
+   "keys": "shift+cmd+right",
+   "context": "channel_rack",
+   "action": "Shift steps right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "mixer.solo",
+   "keys": "s",
+   "context": "mixer",
+   "action": "Solo current track",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "mixer.alt_solo",
+   "keys": "opt+s",
+   "context": "mixer",
+   "action": "Solo current track + all routed tracks",
+   "risk": "toggle",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "mixer.select_linked_channels",
+   "keys": "opt+l",
+   "context": "mixer",
+   "action": "Select channels linked to the selected track",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "mixer.move_track_left",
+   "keys": "opt+left",
+   "context": "mixer",
+   "action": "Move selected track(s) left",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "mixer.move_track_right",
+   "keys": "opt+right",
+   "context": "mixer",
+   "action": "Move selected track(s) right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "mixer.render_armed",
+   "keys": "opt+r",
+   "context": "mixer",
+   "action": "Render armed tracks to .wav (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "mixer.wave_view",
+   "keys": "opt+w",
+   "context": "mixer",
+   "action": "Toggle peak-meter wave view",
+   "risk": "view",
+   "status": "verified 2026-10-04 (screen diff, reversed exactly)",
+   "priority": 3
+  },
+  {
+   "id": "mixer.select_all",
+   "keys": "cmd+a",
+   "context": "mixer",
+   "action": "Select all mixer tracks",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "mixer.link_channels",
+   "keys": "cmd+l",
+   "context": "mixer",
+   "action": "Link selected channels to selected track",
+   "risk": "edit",
+   "status": "untested",
+   "prefer": "fl_channel(action='route')",
+   "priority": 1
+  },
+  {
+   "id": "mixer.link_channels_from",
+   "keys": "shift+cmd+l",
+   "context": "mixer",
+   "action": "Link selected channels STARTING from selected track",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "mixer.save_track_state",
+   "keys": "cmd+shift+s",
+   "context": "mixer",
+   "action": "Save mixer track state (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "mixer.track_properties",
+   "keys": "cmd+return",
+   "context": "mixer",
+   "action": "Show/hide mixer track properties",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "mixer.rename_track",
+   "keys": "F2",
+   "context": "mixer",
+   "action": "Rename selected track (text field; typing does not reach it)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.paint_tool",
+   "keys": "b",
+   "context": "playlist",
+   "action": "Paint tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.slice_tool",
+   "keys": "c",
+   "context": "playlist",
+   "action": "Slice tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.delete_tool",
+   "keys": "d",
+   "context": "playlist",
+   "action": "Delete tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.select_tool",
+   "keys": "e",
+   "context": "playlist",
+   "action": "Select tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.draw_tool",
+   "keys": "p",
+   "context": "playlist",
+   "action": "Draw tool (pencil)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.mute_tool",
+   "keys": "t",
+   "context": "playlist",
+   "action": "Mute tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.playback_tool",
+   "keys": "y",
+   "context": "playlist",
+   "action": "Playback tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_tool",
+   "keys": "z",
+   "context": "playlist",
+   "action": "Zoom tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.center_playhead",
+   "keys": "shift+0",
+   "context": "playlist",
+   "action": "Center to play-head",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_1",
+   "keys": "shift+1",
+   "context": "playlist",
+   "action": "Horizontal zoom level 1",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_2",
+   "keys": "shift+2",
+   "context": "playlist",
+   "action": "Horizontal zoom level 2",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_3",
+   "keys": "shift+3",
+   "context": "playlist",
+   "action": "Horizontal zoom level 3",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_all",
+   "keys": "shift+4",
+   "context": "playlist",
+   "action": "Horizontal zoom, show all",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_to_selection",
+   "keys": "shift+5",
+   "context": "playlist",
+   "action": "Zoom to selection",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_in",
+   "keys": "pgup",
+   "context": "playlist",
+   "action": "Zoom in",
+   "risk": "view",
+   "status": "verified 2026-10-04 (screen diff, reversed exactly)",
+   "priority": 1
+  },
+  {
+   "id": "playlist.zoom_out",
+   "keys": "pgdn",
+   "context": "playlist",
+   "action": "Zoom out",
+   "risk": "view",
+   "status": "verified 2026-10-04 (screen diff, reversed exactly)",
+   "priority": 1
+  },
+  {
+   "id": "playlist.slip_tool",
+   "keys": "s",
+   "context": "playlist",
+   "action": "Slip edit tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.snap_toggle",
+   "keys": "backspace",
+   "context": "playlist",
+   "action": "Global snap (toggle)",
+   "risk": "toggle",
+   "status": "untested",
+   "verify": {
+    "changes": "ui.getSnapMode"
+   },
+   "priority": 2
+  },
+  {
+   "id": "playlist.delete_selected",
+   "keys": "fwddel",
+   "context": "playlist",
+   "action": "Delete selected",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.select_all",
+   "keys": "cmd+a",
+   "context": "playlist",
+   "action": "Select all",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.grid_color",
+   "keys": "cmd+opt+g",
+   "context": "playlist",
+   "action": "Grid color menu",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.resize_from_left",
+   "keys": "cmd+opt+home",
+   "context": "playlist",
+   "action": "Toggle resizing from left",
+   "risk": "toggle",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.duplicate_right",
+   "keys": "cmd+b",
+   "context": "playlist",
+   "action": "Duplicate selection to the right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.copy",
+   "keys": "cmd+c",
+   "context": "playlist",
+   "action": "Copy selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.deselect",
+   "keys": "cmd+d",
+   "context": "playlist",
+   "action": "Deselect",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.delete_space",
+   "keys": "cmd+fwddel",
+   "context": "playlist",
+   "action": "Delete space equal to selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.select_time_before",
+   "keys": "cmd+left",
+   "context": "playlist",
+   "action": "Select time before selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.select_time_after",
+   "keys": "cmd+right",
+   "context": "playlist",
+   "action": "Select time after selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.select_time_around",
+   "keys": "cmd+return",
+   "context": "playlist",
+   "action": "Select time around selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.paste",
+   "keys": "cmd+v",
+   "context": "playlist",
+   "action": "Paste selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.cut",
+   "keys": "cmd+x",
+   "context": "playlist",
+   "action": "Cut selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.time_signature",
+   "keys": "shift+opt+t",
+   "context": "playlist",
+   "action": "Set a time signature (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_transport(action='set_timesig')",
+   "priority": 3
+  },
+  {
+   "id": "playlist.group",
+   "keys": "shift+g",
+   "context": "playlist",
+   "action": "Group selection",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.invert_selection",
+   "keys": "shift+i",
+   "context": "playlist",
+   "action": "Invert selection",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.move_left",
+   "keys": "shift+left",
+   "context": "playlist",
+   "action": "Move selection left",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.move_right",
+   "keys": "shift+right",
+   "context": "playlist",
+   "action": "Move selection right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.move_up",
+   "keys": "shift+up",
+   "context": "playlist",
+   "action": "Move selection up",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.move_down",
+   "keys": "shift+down",
+   "context": "playlist",
+   "action": "Move selection down",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.ungroup",
+   "keys": "opt+g",
+   "context": "playlist",
+   "action": "Ungroup selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.mute_selection",
+   "keys": "opt+m",
+   "context": "playlist",
+   "action": "Mute selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.unmute_selection",
+   "keys": "opt+shift+m",
+   "context": "playlist",
+   "action": "Unmute selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.zoom_on_selection",
+   "keys": "5",
+   "context": "playlist",
+   "action": "Zoom on selection",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.zoom_on_performance",
+   "keys": "6",
+   "context": "playlist",
+   "action": "Zoom on performance clips",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.fit_performance_zone",
+   "keys": "shift+6",
+   "context": "playlist",
+   "action": "Fit performance zone",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.transpose_down",
+   "keys": "7",
+   "context": "playlist",
+   "action": "Transpose down",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.transpose_up",
+   "keys": "8",
+   "context": "playlist",
+   "action": "Transpose up",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.reverse_audio",
+   "keys": "9",
+   "context": "playlist",
+   "action": "Reverse (audio clips)",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.playhead_to_start",
+   "keys": "home",
+   "context": "playlist",
+   "action": "Move playback marker to start",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.next_marker",
+   "keys": "opt+num_slash",
+   "context": "playlist",
+   "action": "Jump to next song marker",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.prev_marker",
+   "keys": "opt+num_star",
+   "context": "playlist",
+   "action": "Jump to previous song marker",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.picker_panel",
+   "keys": "opt+p",
+   "context": "playlist",
+   "action": "Open the picker panel",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.add_time_marker",
+   "keys": "opt+t",
+   "context": "playlist",
+   "action": "Add time marker",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "playlist.add_time_marker_cmd",
+   "keys": "cmd+t",
+   "context": "playlist",
+   "action": "Add time marker",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.consolidate",
+   "keys": "cmd+opt+c",
+   "context": "playlist",
+   "action": "Consolidate clips from first clip (renders)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.consolidate_from_start",
+   "keys": "cmd+opt+shift+c",
+   "context": "playlist",
+   "action": "Consolidate clips from playlist start (renders)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.project_picker",
+   "keys": "cmd+F8",
+   "context": "playlist",
+   "action": "Open project picker",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "playlist.performance_mode",
+   "keys": "cmd+p",
+   "context": "playlist",
+   "action": "Toggle performance mode",
+   "risk": "toggle",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "playlist.select_by_source",
+   "keys": "shift+c",
+   "context": "playlist",
+   "action": "Select all clips by source",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.stretch_mode",
+   "keys": "shift+m",
+   "context": "playlist",
+   "action": "Switch stretch mode",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "playlist.quick_quantize",
+   "keys": "shift+q",
+   "context": "playlist",
+   "action": "Quick quantize clip start times",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.paint_tool",
+   "keys": "b",
+   "context": "piano_roll",
+   "action": "Paint tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.slice_tool",
+   "keys": "c",
+   "context": "piano_roll",
+   "action": "Slice tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.delete_tool",
+   "keys": "d",
+   "context": "piano_roll",
+   "action": "Delete tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.select_tool",
+   "keys": "e",
+   "context": "piano_roll",
+   "action": "Select tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.draw_tool",
+   "keys": "p",
+   "context": "piano_roll",
+   "action": "Draw tool (pencil)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.mute_tool",
+   "keys": "t",
+   "context": "piano_roll",
+   "action": "Mute tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.playback_tool",
+   "keys": "y",
+   "context": "piano_roll",
+   "action": "Playback tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_tool",
+   "keys": "z",
+   "context": "piano_roll",
+   "action": "Zoom tool",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.center_playhead",
+   "keys": "shift+0",
+   "context": "piano_roll",
+   "action": "Center to play-head",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_1",
+   "keys": "shift+1",
+   "context": "piano_roll",
+   "action": "Horizontal zoom level 1",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_2",
+   "keys": "shift+2",
+   "context": "piano_roll",
+   "action": "Horizontal zoom level 2",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_3",
+   "keys": "shift+3",
+   "context": "piano_roll",
+   "action": "Horizontal zoom level 3",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_all",
+   "keys": "shift+4",
+   "context": "piano_roll",
+   "action": "Horizontal zoom, show all",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_to_selection",
+   "keys": "shift+5",
+   "context": "piano_roll",
+   "action": "Zoom to selection",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.zoom_in",
+   "keys": "pgup",
+   "context": "piano_roll",
+   "action": "Zoom in",
+   "risk": "view",
+   "status": "verified 2026-10-04 (screen diff, reversed exactly)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.zoom_out",
+   "keys": "pgdn",
+   "context": "piano_roll",
+   "action": "Zoom out",
+   "risk": "view",
+   "status": "verified 2026-10-04 (screen diff, reversed exactly)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.snap_toggle",
+   "keys": "backspace",
+   "context": "piano_roll",
+   "action": "Global snap (toggle)",
+   "risk": "toggle",
+   "status": "untested",
+   "verify": {
+    "changes": "ui.getSnapMode"
+   },
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.delete_selected",
+   "keys": "fwddel",
+   "context": "piano_roll",
+   "action": "Delete selected",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.select_all",
+   "keys": "cmd+a",
+   "context": "piano_roll",
+   "action": "Select all",
+   "risk": "view",
+   "status": "verified 2026-10-04 (enabled legato/octave on all 4 notes)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.grid_color",
+   "keys": "cmd+opt+g",
+   "context": "piano_roll",
+   "action": "Grid color menu",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.resize_from_left",
+   "keys": "cmd+opt+home",
+   "context": "piano_roll",
+   "action": "Toggle resizing from left",
+   "risk": "toggle",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.duplicate_right",
+   "keys": "cmd+b",
+   "context": "piano_roll",
+   "action": "Duplicate selection to the right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.copy",
+   "keys": "cmd+c",
+   "context": "piano_roll",
+   "action": "Copy selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.deselect",
+   "keys": "cmd+d",
+   "context": "piano_roll",
+   "action": "Deselect",
+   "risk": "view",
+   "status": "verified 2026-10-04 (sent in roll; part of the legato/octave runs)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.delete_space",
+   "keys": "cmd+fwddel",
+   "context": "piano_roll",
+   "action": "Delete space equal to selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.select_time_before",
+   "keys": "cmd+left",
+   "context": "piano_roll",
+   "action": "Select time before selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.select_time_after",
+   "keys": "cmd+right",
+   "context": "piano_roll",
+   "action": "Select time after selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.select_time_around",
+   "keys": "cmd+return",
+   "context": "piano_roll",
+   "action": "Select time around selection",
+   "risk": "view",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.paste",
+   "keys": "cmd+v",
+   "context": "piano_roll",
+   "action": "Paste selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.cut",
+   "keys": "cmd+x",
+   "context": "piano_roll",
+   "action": "Cut selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.time_signature",
+   "keys": "shift+opt+t",
+   "context": "piano_roll",
+   "action": "Set a time signature (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "fl_transport(action='set_timesig')",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.group",
+   "keys": "shift+g",
+   "context": "piano_roll",
+   "action": "Group selection",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.invert_selection",
+   "keys": "shift+i",
+   "context": "piano_roll",
+   "action": "Invert selection",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.move_left",
+   "keys": "shift+left",
+   "context": "piano_roll",
+   "action": "Move selection left",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.move_right",
+   "keys": "shift+right",
+   "context": "piano_roll",
+   "action": "Move selection right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.move_up",
+   "keys": "shift+up",
+   "context": "piano_roll",
+   "action": "Move selection up",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.move_down",
+   "keys": "shift+down",
+   "context": "piano_roll",
+   "action": "Move selection down",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.ungroup",
+   "keys": "opt+g",
+   "context": "piano_roll",
+   "action": "Ungroup selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.mute_selection",
+   "keys": "opt+m",
+   "context": "piano_roll",
+   "action": "Mute selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.unmute_selection",
+   "keys": "opt+shift+m",
+   "context": "piano_roll",
+   "action": "Unmute selection",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.next_property",
+   "keys": "f",
+   "context": "piano_roll",
+   "action": "Show next property in event lane",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.cycle_property",
+   "keys": "shift+f",
+   "context": "piano_roll",
+   "action": "Cycle through note properties",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.channel_above",
+   "keys": "g",
+   "context": "piano_roll",
+   "action": "Select the channel above (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.channel_above_with_notes",
+   "keys": "h",
+   "context": "piano_roll",
+   "action": "Select the channel above with note data (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.channel_below_with_notes",
+   "keys": "j",
+   "context": "piano_roll",
+   "action": "Select the channel below with note data (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.channel_below",
+   "keys": "k",
+   "context": "piano_roll",
+   "action": "Select the channel below (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.next_channel",
+   "keys": "shift+k",
+   "context": "piano_roll",
+   "action": "Select the next channel (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.next_channel_with_notes",
+   "keys": "shift+h",
+   "context": "piano_roll",
+   "action": "Select next channel with notes (retargets the roll)",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.keyboard_view",
+   "keys": "m",
+   "context": "piano_roll",
+   "action": "Keyboard view mode (toggle)",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.portamento",
+   "keys": "o",
+   "context": "piano_roll",
+   "action": "Portamento (toggle)",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.slide",
+   "keys": "s",
+   "context": "piano_roll",
+   "action": "Slide note (toggle)",
+   "risk": "toggle",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.note_helpers",
+   "keys": "opt+b",
+   "context": "piano_roll",
+   "action": "View note helpers",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.note_color",
+   "keys": "opt+c",
+   "context": "piano_roll",
+   "action": "Change color of selected notes",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.waveform_helper",
+   "keys": "opt+n",
+   "context": "piano_roll",
+   "action": "Switch waveform helper view",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.ghost_channels",
+   "keys": "opt+v",
+   "context": "piano_roll",
+   "action": "Ghost channels on/off",
+   "risk": "view",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.nudge_left",
+   "keys": "opt+left",
+   "context": "piano_roll",
+   "action": "Nudge position left",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.nudge_right",
+   "keys": "opt+right",
+   "context": "piano_roll",
+   "action": "Nudge position right",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.nudge_up",
+   "keys": "opt+up",
+   "context": "piano_roll",
+   "action": "Nudge up",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.nudge_down",
+   "keys": "opt+down",
+   "context": "piano_roll",
+   "action": "Nudge down",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.glue",
+   "keys": "cmd+g",
+   "context": "piano_roll",
+   "action": "Glue selected notes",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.insert_controller_value",
+   "keys": "cmd+i",
+   "context": "piano_roll",
+   "action": "Insert current controller value",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 2
+  },
+  {
+   "id": "piano_roll.quick_legato",
+   "keys": "cmd+l",
+   "context": "piano_roll",
+   "action": "Quick legato",
+   "risk": "edit",
+   "status": "verified 2026-10-04 (4 notes 0.25 -> 1.0 beat, roll re-export)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.quick_quantize",
+   "keys": "cmd+opt+q",
+   "context": "piano_roll",
+   "action": "Quick quantize",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.quick_chop",
+   "keys": "cmd+u",
+   "context": "piano_roll",
+   "action": "Quick chop",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.octave_up",
+   "keys": "cmd+up",
+   "context": "piano_roll",
+   "action": "Transpose selection +1 octave",
+   "risk": "edit",
+   "status": "verified 2026-10-04 (60,62,64,65 -> 72,74,76,77, auto read-back)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.octave_down",
+   "keys": "cmd+down",
+   "context": "piano_roll",
+   "action": "Transpose selection -1 octave",
+   "risk": "edit",
+   "status": "verified 2026-10-04 (72.. -> 60.., auto read-back)",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.import_midi",
+   "keys": "cmd+m",
+   "context": "piano_roll",
+   "action": "Import MIDI file (native dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "prefer": "import_midi route (fl-studio-mcp/DEV-TASKS.md C3)",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.paste_midi_clipboard",
+   "keys": "shift+cmd+v",
+   "context": "piano_roll",
+   "action": "Paste from MIDI clipboard",
+   "risk": "edit",
+   "status": "untested",
+   "priority": 1
+  },
+  {
+   "id": "piano_roll.discard_lengths",
+   "keys": "shift+d",
+   "context": "piano_roll",
+   "action": "Discard selected note lengths",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.select_by_color",
+   "keys": "shift+c",
+   "context": "piano_roll",
+   "action": "Select by color",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.select_random_groups",
+   "keys": "shift+m",
+   "context": "piano_roll",
+   "action": "Select groups of notes at random",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.chord_off",
+   "keys": "shift+n",
+   "context": "piano_roll",
+   "action": "Turn off selected chord",
+   "risk": "edit",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.select_random",
+   "keys": "shift+r",
+   "context": "piano_roll",
+   "action": "Select at random",
+   "risk": "view",
+   "status": "no_effect 2026-10-04 (key class: bare/shift letters+digits never reach FL from macOS; live: d, y, shift+1)",
+   "reach": "no",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.arpeggiator",
+   "keys": "opt+a",
+   "context": "piano_roll",
+   "action": "Arpeggiator tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.riff_machine",
+   "keys": "opt+e",
+   "context": "piano_roll",
+   "action": "Riff machine (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.flam",
+   "keys": "opt+f",
+   "context": "piano_roll",
+   "action": "Flam (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.limit",
+   "keys": "opt+k",
+   "context": "piano_roll",
+   "action": "Limit tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.articulate",
+   "keys": "opt+l",
+   "context": "piano_roll",
+   "action": "Articulate tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.lfo",
+   "keys": "opt+o",
+   "context": "piano_roll",
+   "action": "LFO tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.quantize",
+   "keys": "opt+q",
+   "context": "piano_roll",
+   "action": "Quantize (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.randomize",
+   "keys": "opt+r",
+   "context": "piano_roll",
+   "action": "Randomize tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.strum",
+   "keys": "opt+s",
+   "context": "piano_roll",
+   "action": "Strum tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.chop",
+   "keys": "opt+u",
+   "context": "piano_roll",
+   "action": "Chop tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.claw_machine",
+   "keys": "opt+w",
+   "context": "piano_roll",
+   "action": "Claw machine tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.scale_levels",
+   "keys": "opt+x",
+   "context": "piano_roll",
+   "action": "Scale levels tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "piano_roll.score_flipper",
+   "keys": "opt+y",
+   "context": "piano_roll",
+   "action": "Score flipper tool (dialog)",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3
+  },
+  {
+   "id": "browser.replace_channel",
+   "keys": "return",
+   "context": "browser",
+   "action": "Replace selected channel with the browser item",
+   "risk": "confirm",
+   "status": "untested",
+   "priority": 3,
+   "note": "after a browser key, focus readings stick on 'Browser' until a window is hidden+shown (live 2026-10-04)"
+  },
+  {
+   "id": "browser.preview_next",
+   "keys": "shift+down",
+   "context": "browser",
+   "action": "Step down through items with preview",
+   "risk": "view",
+   "status": "sent-ok 2026-10-04 (focus proven; no oracle for the effect)",
+   "priority": 3,
+   "note": "after a browser key, focus readings stick on 'Browser' until a window is hidden+shown (live 2026-10-04)"
+  },
+  {
+   "id": "browser.preview_prev",
+   "keys": "shift+up",
+   "context": "browser",
+   "action": "Step up through items with preview",
+   "risk": "view",
+   "status": "sent-ok 2026-10-04 (focus proven; no oracle for the effect)",
+   "priority": 3,
+   "note": "after a browser key, focus readings stick on 'Browser' until a window is hidden+shown (live 2026-10-04)"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "name": "vocal-buses",
+  "status": "convention, not auditioned",
+  "source": "In The Mix bus layout + TRIFREEZE ducked sends (vocal-bus-routing.md)",
+  "routing": {
+    "names": {
+      "vocal": "Vocal",
+      "vocal_bus": "Vocal Bus",
+      "reverb_bus": "Reverb Bus",
+      "delay_bus": "Delay Bus"
+    },
+    "colors": {
+      "vocal": "#1F3A93",
+      "vocal_bus": "#1F3A93",
+      "reverb_bus": "#3A7BD5",
+      "delay_bus": "#7FB3F5"
+    },
+    "default_send": 0.6,
+    "send_levels": {
+      "Hall Reverb": 0.55,
+      "Plate Reverb": 0.5,
+      "Delay 1/4": 0.45,
+      "Delay Ping": 0.4
+    },
+    "delay_bus_send": 0.45
+  },
+  "chain": [
+    {
+      "step": "reverb",
+      "plugin": "Fruity Reeverb 2",
+      "params": [
+        {
+          "param": [
+            "Dry level",
+            "Dry"
+          ],
+          "value": 0.0
+        },
+        {
+          "param": [
+            "Wet level",
+            "Wet"
+          ],
+          "target": "100%"
+        }
+      ],
+      "note": "on each REVERB track: dry 0 / wet 100, then an EQ (high-pass, maybe lift highs)"
+    },
+    {
+      "step": "delay",
+      "plugin": "Fruity Delay 3",
+      "params": [
+        {
+          "param": [
+            "Output dry",
+            "Dry",
+            "Dry level"
+          ],
+          "value": 0.0
+        },
+        {
+          "param": [
+            "Output wet",
+            "Wet",
+            "Wet level"
+          ],
+          "value": 1.0
+        },
+        {
+          "param": [
+            "Delay type"
+          ],
+          "target": "Ping pong"
+        }
+      ],
+      "note": "on each DELAY track: dry 0 / wet 100; ping-pong mode by hand"
+    },
+    {
+      "step": "duck",
+      "plugin": "Fruity Limiter",
+      "note": "COMP tab, sidechain input = the vocal track, low threshold, high ratio: effect ducks while singing"
+    }
+  ]
+}

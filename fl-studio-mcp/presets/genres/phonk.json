@@ -1,0 +1,30 @@
+{
+  "id": "phonk",
+  "name": "Phonk",
+  "bpm": 140,
+  "swing": 0.0,
+  "bars": 4,
+  "key": "C phrygian",
+  "beat": "phonk",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "i",
+      "II"
+    ],
+    "quality": "triad",
+    "rhythm": "stab",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "sustain",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (generic genre shape)"
+}

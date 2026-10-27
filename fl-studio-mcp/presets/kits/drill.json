@@ -1,0 +1,116 @@
+{
+  "id": "drill",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Power ShortKick 02.wv",
+      "flavour": "kick_sub",
+      "part": "kick",
+      "channel": "Kick DRILL",
+      "features": {
+        "cen": 35.1,
+        "click": 0.0007,
+        "dur": 0.808,
+        "low": 1.0,
+        "peak": 0.984
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/MA MachineCity Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA DirtTracks Kick.wv",
+        "Drums (ModeAudio)/Kicks/MA ElegantScent Kick.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Power Snare 27.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare DRILL",
+      "features": {
+        "cen": 3189.4,
+        "click": 0.0718,
+        "dur": 0.289,
+        "low": 0.0,
+        "peak": 1.643
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Power Snare 34.wv",
+        "Drums (ModeAudio)/Snares/Power Snare 14.wv",
+        "Drums (ModeAudio)/Snares/Power Snare 02.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Power Clap 02.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap DRILL",
+      "features": {
+        "cen": 1884.0,
+        "click": 0.6396,
+        "dur": 0.305,
+        "low": 0.0,
+        "peak": 1.608
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Power Clap 01.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 12.wv",
+        "Drums (ModeAudio)/Claps/Power Clap 07.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Power CHat 08.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat DRILL",
+      "features": {
+        "cen": 7251.9,
+        "click": 0.9875,
+        "dur": 0.052,
+        "low": 0.0,
+        "peak": 0.722
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Power CHat 01.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 02.wv",
+        "Drums (ModeAudio)/Hi Hats/Power CHat 13.wv"
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/Fracture Perc 25.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc DRILL",
+      "features": {
+        "cen": 937.7,
+        "click": 0.5879,
+        "dur": 0.319,
+        "low": 0.051,
+        "peak": 1.253
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/MA GoldenGates Perc.wv",
+        "Drums (ModeAudio)/Percussion/Fracture Perc 05.wv",
+        "Drums (ModeAudio)/Percussion/MA Sideways Perc 01.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

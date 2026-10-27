@@ -1,0 +1,58 @@
+"""0MCP-Workbench — generic Edison script with a baked-in request (R3/S4.2/L16).
+
+Installed to ~/Documents/Image-Line/FL Studio/Settings/Audio scripts/Workbench/.
+Run from Edison: right-click ▸ Tools ▸ Run script ▸ Workbench ▸ 0MCP-Workbench.
+
+Edison's embedded Python has NO file I/O (live probe 2026-10-01, PE 26.1.6:
+open() for read or write raises "SystemError: io.FileIO returned NULL", and
+os.open is stubbed; only os.path.exists works). So the host
+(fl_studio_mcp.utils.edison_bridge) rewrites the REQUEST line below before
+each run. The menu target never changes, and the payload travels in the
+script itself. The reply comes back through Utils.ShowMessage as one
+"MCP-EDISON k=v ..." line that the host OCRs and dismisses.
+
+REQUEST keys (all optional):
+  request_id, load ("/abs/path.wav": EditorSample.LoadFromFile, no Open panel),
+  clear_regions (bool), regions ([{"name", "start_s", "end_s"}, ...]).
+Uses only the documented enveditor surface (FL's Config/Audio scripts/Reference.txt).
+"""
+from enveditor import *
+
+REQUEST = {}  # MCP-REQUEST (replaced by edison_bridge.build_script)
+
+
+def _run(req):
+    r = {"id": req.get("request_id") or "-", "ok": 0, "loaded": 0,
+         "deleted": 0, "added": 0, "count": -1, "len": -1, "err": "-"}
+    try:
+        s = EditorSample
+        if req.get("load"):
+            s.LoadFromFile(req["load"])
+            r["loaded"] = 1
+        if req.get("clear_regions"):
+            n = s.RegionCount
+            for i in range(n - 1, -1, -1):
+                s.DeleteRegion(i)
+            r["deleted"] = n
+        sr = float(s.SampleRate)
+        last = int(s.Length) - 1
+        for g in req.get("regions") or []:
+            start = int(round(float(g["start_s"]) * sr))
+            end = int(round(float(g.get("end_s", g["start_s"])) * sr))
+            if start < 0 or start > last:
+                continue
+            s.AddRegion(str(g.get("name") or "region %d" % (r["added"] + 1)),
+                        start, max(start, min(last, end)))
+            r["added"] += 1
+        r["count"] = int(s.RegionCount)
+        r["len"] = int(s.Length)
+        r["ok"] = 1
+    except Exception as e:  # report, never raise into Edison
+        r["err"] = ("%s:%s" % (type(e).__name__, e)).replace(" ", "_")[:80]
+    return r
+
+
+_r = _run(REQUEST)
+Utils.ShowMessage("MCP-EDISON " + " ".join(
+    "%s=%s" % (k, _r[k]) for k in
+    ("id", "ok", "loaded", "deleted", "added", "count", "len", "err")))

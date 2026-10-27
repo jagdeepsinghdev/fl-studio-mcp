@@ -1,0 +1,80 @@
+{
+  "id": "future-bass",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Attack Kick 51.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick FBASS",
+      "features": {
+        "cen": 83.5,
+        "click": 0.0015,
+        "dur": 0.254,
+        "low": 0.991,
+        "peak": 1.008
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Attack Kick 62.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 18.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 01.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Attack Snare 22.wv",
+      "flavour": "snare_long",
+      "part": "snare",
+      "channel": "Snare FBASS",
+      "features": {
+        "cen": 2187.1,
+        "click": 0.8874,
+        "dur": 0.5,
+        "low": 0.0,
+        "peak": 1.64
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Attack Snare 28.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 60.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 55.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Hyper HouseParty Clap 02.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap FBASS",
+      "features": {
+        "cen": 2038.9,
+        "click": 0.9272,
+        "dur": 0.346,
+        "low": 0.0,
+        "peak": 1.163
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Hyper GoldenDays Clap.wv",
+        "Drums (ModeAudio)/Claps/Hyper DoubleBarrel Clap.wv",
+        "Drums (ModeAudio)/Claps/Attack Clap 14.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Hyper RagsToRiches Hat 01.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat FBASS",
+      "features": {
+        "cen": 7520.8,
+        "click": 0.9993,
+        "dur": 0.043,
+        "low": 0.0,
+        "peak": 1.256
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Hyper DoubleBarrel Hat 02.wv",
+        "Drums (ModeAudio)/Hi Hats/Hyper Roulette Hat 01.wv",
+        "Drums (ModeAudio)/Hi Hats/Hyper RagsToRiches Hat 03.wv"
+      ]
+    }
+  }
+}

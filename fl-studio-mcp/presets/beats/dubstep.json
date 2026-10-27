@@ -1,0 +1,93 @@
+{
+  "id": "dubstep",
+  "name": "Dubstep (half-time)",
+  "bpm": 140,
+  "swing": 0.0,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  },
+  "notes": "Grid from skills/fl-genres/references/dubstep.md (convention, not auditioned)."
+}

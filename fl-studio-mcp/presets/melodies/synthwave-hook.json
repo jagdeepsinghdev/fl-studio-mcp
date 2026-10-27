@@ -1,0 +1,25 @@
+{
+  "id": "synthwave-hook",
+  "name": "Synthwave / retrowave hook (E Phrygian)",
+  "key": "E Phrygian (D F# A B E)",
+  "bpm": 110,
+  "scale": "E Phrygian: E F G# A B C D E",
+  "channel": "Piano",
+  "melody": [
+    {"note": 64, "step": 0,  "dur": 2, "vel": 82},
+    {"note": 65, "step": 2,  "dur": 1, "vel": 70},
+    {"note": 66, "step": 4,  "dur": 2, "vel": 80},
+    {"note": 71, "step": 6,  "dur": 1, "vel": 74},
+    {"note": 76, "step": 8,  "dur": 2, "vel": 88},
+    {"note": 76, "step": 10, "dur": 1, "vel": 70},
+    {"note": 74, "step": 12, "dur": 2, "vel": 82},
+    {"note": 71, "step": 14, "dur": 2, "vel": 76}
+  ],
+  "chords": [
+    {"notes": [52, 55, 59, 64], "step": 0,  "dur": 4},
+    {"notes": [53, 57, 60, 65], "step": 4,  "dur": 4},
+    {"notes": [49, 53, 57, 62], "step": 8,  "dur": 4},
+    {"notes": [52, 55, 59, 64], "step": 12, "dur": 4}
+  ],
+  "notes": "E Phrygian (the 'synthwave/retrowave' minor with a flat 2nd) with a driving hook that leaps an octave and falls back. Chords: Em - F - D - Em. On FLEX use a bright analog-pads or supersaw patch, add a big delay and reverb. Pairs with house or a 16th-hat beat."
+}

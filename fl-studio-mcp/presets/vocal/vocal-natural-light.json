@@ -1,0 +1,19 @@
+{
+  "name": "vocal-natural-light",
+  "status": "convention, not auditioned; knob names UNVERIFIED",
+  "source": "In The Mix lighter chain (vocal-chain.md 'Lighter chain' + §2)",
+  "chain": [
+    {"step": "deess", "plugin": "Patcher", "preset": "Intelligent De-Esser",
+     "note": "transparent: stop before the singer sounds lispy"},
+    {"step": "subtractive_eq", "plugin": "Fruity Parametric EQ 2",
+     "params": [{"param": ["Band 1 freq", "Freq 1", "Band 1 frequency"], "target": "100 Hz"}],
+     "note": "narrow +6 dB sweep, cut the resonances found a few dB; HPF ~100 Hz (voice-dependent)"},
+    {"step": "comp", "plugin": "Fruity Limiter",
+     "params": [{"param": ["Comp ratio", "Ratio"], "target": "3:1"},
+                {"param": ["Comp attack time", "Comp attack", "Attack"], "target": "15 ms"},
+                {"param": ["Comp release time", "Comp release", "Release"], "target": "120 ms"}],
+     "note": "3-10 dB GR; medium-long attack keeps the start of each word; release recovers between words; output = input level"},
+    {"step": "excite", "plugin": "Soundgoodizer",
+     "note": "bring brightness back (stand-in for an exciter); blend by ear"}
+  ]
+}

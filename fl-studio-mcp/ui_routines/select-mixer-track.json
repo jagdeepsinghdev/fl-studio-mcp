@@ -1,0 +1,11 @@
+{
+  "description": "Make a mixer track the selected/active one (no clicks) and read it back.",
+  "status": "untested",
+  "vars": {"track": {"type": "int"}},
+  "steps": [
+    {"call": "mixer.setTrackNumber", "args": ["{track}"]},
+    {"wait": 0.2},
+    {"expect": "mixer.trackNumber", "equals": "{track}", "retries": 3, "interval": 0.2}
+  ],
+  "on_fail": []
+}

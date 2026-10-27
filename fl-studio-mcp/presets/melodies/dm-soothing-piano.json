@@ -1,0 +1,97 @@
+{
+ "id": "dm-soothing-piano",
+ "name": "D minor soothing piano chords (Dm9 Bbmaj7 Fmaj7 Cmaj9)",
+ "key": "D minor",
+ "bpm": 117,
+ "scale": "D natural minor: D E F G A Bb C",
+ "channel": "Piano",
+ "chords": [
+  {
+   "notes": [
+    50,
+    53,
+    57,
+    60,
+    64
+   ],
+   "step": 0,
+   "dur": 30
+  },
+  {
+   "notes": [
+    46,
+    53,
+    57,
+    62
+   ],
+   "step": 32,
+   "dur": 30
+  },
+  {
+   "notes": [
+    53,
+    57,
+    60,
+    64
+   ],
+   "step": 64,
+   "dur": 30
+  },
+  {
+   "notes": [
+    48,
+    55,
+    59,
+    62,
+    64
+   ],
+   "step": 96,
+   "dur": 30
+  },
+  {
+   "notes": [
+    50,
+    53,
+    57,
+    60,
+    64
+   ],
+   "step": 128,
+   "dur": 30
+  },
+  {
+   "notes": [
+    46,
+    53,
+    57,
+    62
+   ],
+   "step": 160,
+   "dur": 30
+  },
+  {
+   "notes": [
+    53,
+    57,
+    60,
+    64
+   ],
+   "step": 192,
+   "dur": 30
+  },
+  {
+   "notes": [
+    48,
+    55,
+    59,
+    62,
+    64
+   ],
+   "step": 224,
+   "dur": 30
+  }
+ ],
+ "length_beats": 64,
+ "style": "soothing",
+ "notes": "Soft block chords, one per 2 bars, repeated twice = 16 bars (64 beats) for the 117 BPM Guitar_Melody_2 (Empire) D-minor sample. Session used 5-note voicings with a 20 ms roll, velocity ~0.5, piano channel level 0.5, mixer track 0.6 / pan -0.25, FLEX 'Acoustic Piano' reverb mix 0.15. Middle C = 60."
+}

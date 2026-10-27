@@ -1,0 +1,80 @@
+{
+ "plugin": "Fruity Reeverb 2",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Low cut",
+   "value_string": "75Hz"
+  },
+  {
+   "index": 1,
+   "name": "High cut",
+   "value_string": "4.0kHz"
+  },
+  {
+   "index": 2,
+   "name": "Predelay",
+   "value_string": "0ms"
+  },
+  {
+   "index": 3,
+   "name": "Room size",
+   "value_string": "50"
+  },
+  {
+   "index": 4,
+   "name": "Diffusion",
+   "value_string": "100"
+  },
+  {
+   "index": 5,
+   "name": "Decay time",
+   "value_string": "1.5sec"
+  },
+  {
+   "index": 6,
+   "name": "High damping",
+   "value_string": "4.0kHz"
+  },
+  {
+   "index": 7,
+   "name": "Bass multiplier",
+   "value_string": "100%"
+  },
+  {
+   "index": 8,
+   "name": "Crossover",
+   "value_string": "500Hz"
+  },
+  {
+   "index": 9,
+   "name": "Stereo separation",
+   "value_string": "Original"
+  },
+  {
+   "index": 10,
+   "name": "Dry level",
+   "value_string": "100%"
+  },
+  {
+   "index": 11,
+   "name": "Early reflection level",
+   "value_string": "50%"
+  },
+  {
+   "index": 12,
+   "name": "Wet level",
+   "value_string": "50%"
+  },
+  {
+   "index": 13,
+   "name": "Mod Speed",
+   "value_string": "33%"
+  },
+  {
+   "index": 14,
+   "name": "Mod Depth",
+   "value_string": "0%"
+  }
+ ]
+}

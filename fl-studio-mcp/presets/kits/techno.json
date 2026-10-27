@@ -1,0 +1,116 @@
+{
+  "id": "techno",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/HouseGen Kick 14.wv",
+      "flavour": "kick_punch",
+      "part": "kick",
+      "channel": "Kick TECHNO",
+      "features": {
+        "cen": 62.9,
+        "click": 0.0087,
+        "dur": 0.263,
+        "low": 0.984,
+        "peak": 1.002
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/HouseGen Kick 13.wv",
+        "Drums (ModeAudio)/Kicks/Downstream Kick 10.wv",
+        "Drums (ModeAudio)/Kicks/MA Heliocentric Kick 01.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Volt SatSnare 18.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare TECHNO",
+      "features": {
+        "cen": 2098.5,
+        "click": 0.187,
+        "dur": 0.282,
+        "low": 0.013,
+        "peak": 1.389
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Attack Snare 40.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 42.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 39.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Volt CleanClap 11.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap TECHNO",
+      "features": {
+        "cen": 2210.6,
+        "click": 0.9201,
+        "dur": 0.367,
+        "low": 0.0,
+        "peak": 1.187
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Volt CleanClapSnare 10.wv",
+        "Drums (ModeAudio)/Claps/Volt CleanClap 14.wv",
+        "Drums (ModeAudio)/Claps/Volt CleanClap 10.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Volt CleanCHat 08.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat TECHNO",
+      "features": {
+        "cen": 7528.5,
+        "click": 0.9975,
+        "dur": 0.062,
+        "low": 0.0,
+        "peak": 0.316
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Volt CleanCHat 05.wv",
+        "Drums (ModeAudio)/Hi Hats/Volt CleanCHat 07.wv",
+        "Drums (ModeAudio)/Hi Hats/Volt CleanCHat 04.wv"
+      ]
+    },
+    "ohat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Volt CleanOHat 20.wv",
+      "flavour": "ohat",
+      "part": null,
+      "channel": "Open Hat TECHNO",
+      "features": {
+        "cen": 6126.0,
+        "click": 1.0,
+        "dur": 0.617,
+        "low": 0.0,
+        "peak": 0.867
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Volt CleanOHat 05.wv",
+        "Drums (ModeAudio)/Hi Hats/Volt CleanOHat 11.wv",
+        "Drums (ModeAudio)/Hi Hats/Hyper WinterBeach OHat 02.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

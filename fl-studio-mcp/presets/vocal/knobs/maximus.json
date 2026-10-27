@@ -1,0 +1,300 @@
+{
+ "plugin": "Maximus",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Low band frequency",
+   "value_string": "200Hz"
+  },
+  {
+   "index": 1,
+   "name": "Low band slope",
+   "value_string": "12dB"
+  },
+  {
+   "index": 2,
+   "name": "High band frequency",
+   "value_string": "3000Hz"
+  },
+  {
+   "index": 3,
+   "name": "High band slope",
+   "value_string": "12dB"
+  },
+  {
+   "index": 4,
+   "name": "LMH lookahead delay",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 5,
+   "name": "LMH mix",
+   "value_string": "100%"
+  },
+  {
+   "index": 6,
+   "name": "Low cut",
+   "value_string": "20Hz"
+  },
+  {
+   "index": 7,
+   "name": "Low band mode",
+   "value_string": "on"
+  },
+  {
+   "index": 8,
+   "name": "Low band pre gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 9,
+   "name": "Low band post gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 10,
+   "name": "Low band stereo separation",
+   "value_string": "Original"
+  },
+  {
+   "index": 11,
+   "name": "Low band soft saturation threshold",
+   "value_string": "No saturation"
+  },
+  {
+   "index": 12,
+   "name": "Low band soft saturation ceiling",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 13,
+   "name": "Low band attack time",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 14,
+   "name": "Low band release 2 time",
+   "value_string": "Default"
+  },
+  {
+   "index": 15,
+   "name": "Low band attack / release 2 curve",
+   "value_string": "2"
+  },
+  {
+   "index": 16,
+   "name": "Low band release time",
+   "value_string": "85.53ms"
+  },
+  {
+   "index": 17,
+   "name": "Low band release curve",
+   "value_string": "3"
+  },
+  {
+   "index": 18,
+   "name": "Low band sustain window",
+   "value_string": "10.00ms"
+  },
+  {
+   "index": 19,
+   "name": "Low band sustain mode",
+   "value_string": "PEAK"
+  },
+  {
+   "index": 20,
+   "name": "Mid band mode",
+   "value_string": "on"
+  },
+  {
+   "index": 21,
+   "name": "Mid band pre gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 22,
+   "name": "Mid band post gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 23,
+   "name": "Mid band stereo separation",
+   "value_string": "Original"
+  },
+  {
+   "index": 24,
+   "name": "Mid band soft saturation threshold",
+   "value_string": "No saturation"
+  },
+  {
+   "index": 25,
+   "name": "Mid band soft saturation ceiling",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 26,
+   "name": "Mid band attack time",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 27,
+   "name": "Mid band release 2 time",
+   "value_string": "Default"
+  },
+  {
+   "index": 28,
+   "name": "Mid band attack / release 2 curve",
+   "value_string": "2"
+  },
+  {
+   "index": 29,
+   "name": "Mid band release time",
+   "value_string": "85.53ms"
+  },
+  {
+   "index": 30,
+   "name": "Mid band release curve",
+   "value_string": "3"
+  },
+  {
+   "index": 31,
+   "name": "Mid band sustain window",
+   "value_string": "10.00ms"
+  },
+  {
+   "index": 32,
+   "name": "Mid band sustain mode",
+   "value_string": "PEAK"
+  },
+  {
+   "index": 33,
+   "name": "High band mode",
+   "value_string": "on"
+  },
+  {
+   "index": 34,
+   "name": "High band pre gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 35,
+   "name": "High band post gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 36,
+   "name": "High band stereo separation",
+   "value_string": "Original"
+  },
+  {
+   "index": 37,
+   "name": "High band soft saturation threshold",
+   "value_string": "No saturation"
+  },
+  {
+   "index": 38,
+   "name": "High band soft saturation ceiling",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 39,
+   "name": "High band attack time",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 40,
+   "name": "High band release 2 time",
+   "value_string": "Default"
+  },
+  {
+   "index": 41,
+   "name": "High band attack / release 2 curve",
+   "value_string": "2"
+  },
+  {
+   "index": 42,
+   "name": "High band release time",
+   "value_string": "85.53ms"
+  },
+  {
+   "index": 43,
+   "name": "High band release curve",
+   "value_string": "3"
+  },
+  {
+   "index": 44,
+   "name": "High band sustain window",
+   "value_string": "10.00ms"
+  },
+  {
+   "index": 45,
+   "name": "High band sustain mode",
+   "value_string": "PEAK"
+  },
+  {
+   "index": 46,
+   "name": "Master mode",
+   "value_string": "on"
+  },
+  {
+   "index": 47,
+   "name": "Master pre gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 48,
+   "name": "Master post gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 49,
+   "name": "Master stereo separation",
+   "value_string": "Original"
+  },
+  {
+   "index": 50,
+   "name": "Master soft saturation threshold",
+   "value_string": "No saturation"
+  },
+  {
+   "index": 51,
+   "name": "Master soft saturation ceiling",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 52,
+   "name": "Master attack time",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 53,
+   "name": "Master release 2 time",
+   "value_string": "Default"
+  },
+  {
+   "index": 54,
+   "name": "Master attack / release 2 curve",
+   "value_string": "2"
+  },
+  {
+   "index": 55,
+   "name": "Master release time",
+   "value_string": "85.53ms"
+  },
+  {
+   "index": 56,
+   "name": "Master release curve",
+   "value_string": "3"
+  },
+  {
+   "index": 57,
+   "name": "Master sustain window",
+   "value_string": "10.00ms"
+  },
+  {
+   "index": 58,
+   "name": "Master sustain mode",
+   "value_string": "PEAK"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "nursery-beat",
+  "name": "Nursery beat (soft kick + claps, bouncy)",
+  "bpm": 108,
+  "swing": 0.1,
+  "channels": {
+    "kick": {
+      "name": "808 Kick",
+      "pattern": [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "snare": {
+      "name": "808 Snare",
+      "pattern": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "clap": {
+      "name": "808 Clap",
+      "pattern": [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+    },
+    "hat": {
+      "name": "808 HiHat",
+      "pattern": [0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0]
+    }
+  },
+  "notes": "Gentle nursery beat: soft four-on-the-floor kick, claps on 2 and 4 (no hard snare), light off-beat hats. Kept low-energy and non-aggressive for a baby. Keep kick/clap volumes moderate; drop the 808 sub for a cleaner, softer low end."
+}

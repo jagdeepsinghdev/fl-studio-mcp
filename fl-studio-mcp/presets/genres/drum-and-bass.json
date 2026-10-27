@@ -1,0 +1,32 @@
+{
+  "id": "drum-and-bass",
+  "name": "Drum And Bass",
+  "bpm": 174,
+  "swing": 0.0,
+  "bars": 4,
+  "key": "A minor",
+  "beat": "drum-and-bass",
+  "chords": {
+    "channel": "Keys",
+    "plugin": "FLEX",
+    "progression": [
+      "i7",
+      "VI7",
+      "III7",
+      "VII7"
+    ],
+    "quality": "7",
+    "rhythm": "whole",
+    "octave": 4,
+    "velocity": 0.65,
+    "chords_per_bar": 1
+  },
+  "bass": {
+    "channel": "Bass",
+    "plugin": "FLEX",
+    "rhythm": "pulse8",
+    "octave": 2,
+    "velocity": 0.85
+  },
+  "status": "convention, not auditioned (tempo/key: skills/fl-genres; progression: generic genre shape)"
+}

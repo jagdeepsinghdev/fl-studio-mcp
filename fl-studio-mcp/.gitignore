@@ -1,0 +1,10 @@
+.venv/
+.claude/
+fl_controller/__pycache__/
+src/fl_studio_mcp/__pycache__/
+src/fl_studio_mcp/tools/__pycache__
+src/fl_studio_mcp/utils/__pycache__/
+.generated/
+# bridge-generated (to_fl_presets) song-derived presets — rule 10: not committed
+presets/beats/*-s[0-9]*.json
+presets/melodies/*-s[0-9]*.json

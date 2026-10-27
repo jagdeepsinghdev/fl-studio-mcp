@@ -1,0 +1,185 @@
+{
+ "plugin": "Fruity parametric EQ 2",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Band 1 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 1,
+   "name": "Band 2 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 2,
+   "name": "Band 3 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 3,
+   "name": "Band 4 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 4,
+   "name": "Band 5 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 5,
+   "name": "Band 6 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 6,
+   "name": "Band 7 level",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 7,
+   "name": "Band 1 freq",
+   "value_string": "63Hz"
+  },
+  {
+   "index": 8,
+   "name": "Band 2 freq",
+   "value_string": "136Hz"
+  },
+  {
+   "index": 9,
+   "name": "Band 3 freq",
+   "value_string": "294Hz"
+  },
+  {
+   "index": 10,
+   "name": "Band 4 freq",
+   "value_string": "632Hz"
+  },
+  {
+   "index": 11,
+   "name": "Band 5 freq",
+   "value_string": "1363Hz"
+  },
+  {
+   "index": 12,
+   "name": "Band 6 freq",
+   "value_string": "2936Hz"
+  },
+  {
+   "index": 13,
+   "name": "Band 7 freq",
+   "value_string": "6324Hz"
+  },
+  {
+   "index": 14,
+   "name": "Band 1 width",
+   "value_string": "61%"
+  },
+  {
+   "index": 15,
+   "name": "Band 2 width",
+   "value_string": "39%"
+  },
+  {
+   "index": 16,
+   "name": "Band 3 width",
+   "value_string": "39%"
+  },
+  {
+   "index": 17,
+   "name": "Band 4 width",
+   "value_string": "39%"
+  },
+  {
+   "index": 18,
+   "name": "Band 5 width",
+   "value_string": "39%"
+  },
+  {
+   "index": 19,
+   "name": "Band 6 width",
+   "value_string": "39%"
+  },
+  {
+   "index": 20,
+   "name": "Band 7 width",
+   "value_string": "61%"
+  },
+  {
+   "index": 21,
+   "name": "Band 1 type",
+   "value_string": "Low shelf"
+  },
+  {
+   "index": 22,
+   "name": "Band 2 type",
+   "value_string": "Peaking"
+  },
+  {
+   "index": 23,
+   "name": "Band 3 type",
+   "value_string": "Peaking"
+  },
+  {
+   "index": 24,
+   "name": "Band 4 type",
+   "value_string": "Peaking"
+  },
+  {
+   "index": 25,
+   "name": "Band 5 type",
+   "value_string": "Peaking"
+  },
+  {
+   "index": 26,
+   "name": "Band 6 type",
+   "value_string": "Peaking"
+  },
+  {
+   "index": 27,
+   "name": "Band 7 type",
+   "value_string": "High shelf"
+  },
+  {
+   "index": 28,
+   "name": "Band 1 order",
+   "value_string": "2"
+  },
+  {
+   "index": 29,
+   "name": "Band 2 order",
+   "value_string": "2"
+  },
+  {
+   "index": 30,
+   "name": "Band 3 order",
+   "value_string": "2"
+  },
+  {
+   "index": 31,
+   "name": "Band 4 order",
+   "value_string": "2"
+  },
+  {
+   "index": 32,
+   "name": "Band 5 order",
+   "value_string": "2"
+  },
+  {
+   "index": 33,
+   "name": "Band 6 order",
+   "value_string": "2"
+  },
+  {
+   "index": 34,
+   "name": "Band 7 order",
+   "value_string": "2"
+  },
+  {
+   "index": 35,
+   "name": "Main level",
+   "value_string": "0.0dB"
+  }
+ ]
+}

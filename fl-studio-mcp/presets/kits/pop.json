@@ -1,0 +1,116 @@
+{
+  "id": "pop",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Attack Kick 62.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick POP",
+      "features": {
+        "cen": 62.4,
+        "click": 0.0025,
+        "dur": 0.25,
+        "low": 0.995,
+        "peak": 1.008
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Attack Kick 18.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 59.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Attack Snare 19.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare POP",
+      "features": {
+        "cen": 3011.2,
+        "click": 0.0523,
+        "dur": 0.333,
+        "low": 0.003,
+        "peak": 1.019
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Attack Snare 16.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 40.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 42.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/Attack Clap 14.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap POP",
+      "features": {
+        "cen": 2321.3,
+        "click": 0.9185,
+        "dur": 0.235,
+        "low": 0.001,
+        "peak": 1.036
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/Attack Clap 20.wv",
+        "Drums (ModeAudio)/Claps/Attack Clap 03.wv",
+        "Drums (ModeAudio)/Claps/Hyper GoldenDays Clap.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Hyper DoubleBarrel Hat 01.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat POP",
+      "features": {
+        "cen": 6102.9,
+        "click": 0.9816,
+        "dur": 0.089,
+        "low": 0.0,
+        "peak": 0.98
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 05.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 06.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 10.wv"
+      ]
+    },
+    "shaker": {
+      "file": "Drums (ModeAudio)/Shakers/Attack Shaker 10.wv",
+      "flavour": "shaker",
+      "part": null,
+      "channel": "Shaker POP",
+      "features": {
+        "cen": 5648.9,
+        "click": 0.9994,
+        "dur": 0.19,
+        "low": 0.0,
+        "peak": 1.043
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Shakers/Attack Shaker 04.wv",
+        "Drums (ModeAudio)/Shakers/Attack Shaker 08.wv",
+        "Drums (ModeAudio)/Shakers/Attack Shaker 09.wv"
+      ],
+      "pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

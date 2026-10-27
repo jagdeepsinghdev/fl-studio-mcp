@@ -1,0 +1,96 @@
+{
+  "id": "drill",
+  "name": "Drill — C minor (guitar lead + 808 line + Cm/Am chords)",
+  "key": "C minor",
+  "bpm": 140,
+  "scale": "C minor pentatonic: C Db Eb G Ab",
+  "channel": "Guitar Drill",
+  "length_beats": 8,
+  "melody": [
+    {
+      "note": 36,
+      "step": 0,
+      "dur": 3,
+      "vel": 100
+    },
+    {
+      "note": 36,
+      "step": 6,
+      "dur": 2,
+      "vel": 80
+    },
+    {
+      "note": 41,
+      "step": 8,
+      "dur": 4,
+      "vel": 90
+    },
+    {
+      "note": 43,
+      "step": 12,
+      "dur": 7,
+      "vel": 100
+    },
+    {
+      "note": 41,
+      "step": 20,
+      "dur": 4,
+      "vel": 70
+    },
+    {
+      "note": 43,
+      "step": 22,
+      "dur": 7,
+      "vel": 100
+    },
+    {
+      "note": 36,
+      "step": 28,
+      "dur": 3,
+      "vel": 90
+    }
+  ],
+  "chords": [
+    {
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "step": 0,
+      "dur": 16
+    },
+    {
+      "notes": [
+        45,
+        52,
+        57,
+        60
+      ],
+      "step": 4,
+      "dur": 16
+    },
+    {
+      "notes": [
+        48,
+        55,
+        60,
+        63
+      ],
+      "step": 8,
+      "dur": 16
+    },
+    {
+      "notes": [
+        45,
+        52,
+        57,
+        60
+      ],
+      "step": 12,
+      "dur": 16
+    }
+  ],
+  "notes": "2026-09-30: 'dur' values were authored in beats (floats); converted to the 16th-note-step convention (x4, rounded) used by every other melody preset."
+}

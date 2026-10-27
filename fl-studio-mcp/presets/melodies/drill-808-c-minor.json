@@ -1,0 +1,80 @@
+{
+  "id": "drill-808-c-minor",
+  "name": "Drill 808 \u2014 C minor (roots + slides, Cm-Ab-Fm-G)",
+  "key": "C minor",
+  "bpm": 140,
+  "channel": "808",
+  "length_beats": 8,
+  "melody": [
+    {
+      "note": 36,
+      "step": 0,
+      "dur": 4,
+      "vel": 110
+    },
+    {
+      "note": 36,
+      "step": 4,
+      "dur": 4,
+      "vel": 100
+    },
+    {
+      "note": 39,
+      "step": 7,
+      "dur": 1,
+      "vel": 100,
+      "slide": true
+    },
+    {
+      "note": 32,
+      "step": 8,
+      "dur": 3,
+      "vel": 110
+    },
+    {
+      "note": 32,
+      "step": 11,
+      "dur": 5,
+      "vel": 100
+    },
+    {
+      "note": 29,
+      "step": 16,
+      "dur": 4,
+      "vel": 110
+    },
+    {
+      "note": 29,
+      "step": 20,
+      "dur": 4,
+      "vel": 100
+    },
+    {
+      "note": 31,
+      "step": 23,
+      "dur": 1,
+      "vel": 100,
+      "slide": true
+    },
+    {
+      "note": 31,
+      "step": 24,
+      "dur": 3,
+      "vel": 110
+    },
+    {
+      "note": 31,
+      "step": 27,
+      "dur": 5,
+      "vel": 100
+    },
+    {
+      "note": 36,
+      "step": 30,
+      "dur": 2,
+      "vel": 100,
+      "slide": true
+    }
+  ],
+  "notes": "2026-10-01: 808 line for drill-keys-c-minor. Roots C2/Ab1/F1/G1; slide=true notes are FL slide notes that overlap the tail of the sounding note and glide it (C->Eb into Ab, F->G, G->C back to the top of the loop). Load on a sine-ish 808 channel (e.g. 3x Osc) with channel_index."
+}

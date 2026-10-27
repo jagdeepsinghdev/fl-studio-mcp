@@ -1,0 +1,98 @@
+{
+  "id": "reggaeton",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/Attack Kick 18.wv",
+      "flavour": "kick_round",
+      "part": "kick",
+      "channel": "Kick REGGAETON",
+      "features": {
+        "cen": 46.0,
+        "click": 0.0034,
+        "dur": 0.266,
+        "low": 0.983,
+        "peak": 1.001
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/Attack Kick 01.wv",
+        "Drums (ModeAudio)/Kicks/Attack Kick 59.wv",
+        "Drums (ModeAudio)/Kicks/Power ShortKick 19.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/Attack Snare 16.wv",
+      "flavour": "snare_crack",
+      "part": "snare",
+      "channel": "Snare REGGAETON",
+      "features": {
+        "cen": 2787.8,
+        "click": 0.1809,
+        "dur": 0.324,
+        "low": 0.007,
+        "peak": 0.997
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/Attack Snare 40.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 42.wv",
+        "Drums (ModeAudio)/Snares/Attack Snare 39.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/Attack Hat 05.wv",
+      "flavour": "hat_soft",
+      "part": "hat",
+      "channel": "Hat REGGAETON",
+      "features": {
+        "cen": 5906.7,
+        "click": 0.9757,
+        "dur": 0.11,
+        "low": 0.0,
+        "peak": 0.957
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 06.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 10.wv",
+        "Drums (ModeAudio)/Hi Hats/Attack Hat 19.wv"
+      ]
+    },
+    "perc": {
+      "file": "Drums (ModeAudio)/Percussion/Attack Timbale 01.wv",
+      "flavour": "perc",
+      "part": null,
+      "channel": "Perc REGGAETON",
+      "features": {
+        "cen": 889.7,
+        "click": 0.9327,
+        "dur": 0.402,
+        "low": 0.0,
+        "peak": 1.125
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Percussion/Attack Timbale 03.wv",
+        "Drums (ModeAudio)/Percussion/Attack Timbale 02.wv",
+        "Drums (ModeAudio)/Percussion/Volt CleanClave 02.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  }
+}

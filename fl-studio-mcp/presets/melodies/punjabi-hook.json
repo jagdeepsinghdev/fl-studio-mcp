@@ -1,0 +1,35 @@
+{
+  "id": "punjabi-hook",
+  "name": "Punjabi toori hook (bright, catchy, F minor pentatonic)",
+  "key": "F minor pentatonic",
+  "bpm": 96,
+  "scale": "F Gb Ab Bb Cb (F minor pentatonic). MIDI: F3=53 Gb3=54 Ab3=56 Bb3=58 Cb4=59 F4=65 Gb4=66 Ab4=68 Bb4=70 Cb5=71",
+  "channel": "Piano",
+  "length_beats": 8,
+  "melody": [
+    {"note": 68, "step": 0,  "dur": 2, "vel": 100},
+    {"note": 70, "step": 2,  "dur": 1, "vel": 92},
+    {"note": 68, "step": 3,  "dur": 1, "vel": 92},
+    {"note": 66, "step": 4,  "dur": 2, "vel": 96},
+    {"note": 65, "step": 6,  "dur": 2, "vel": 88},
+    {"note": 66, "step": 8,  "dur": 2, "vel": 96},
+    {"note": 68, "step": 10, "dur": 1, "vel": 92},
+    {"note": 70, "step": 11, "dur": 1, "vel": 100},
+    {"note": 71, "step": 12, "dur": 2, "vel": 96},
+    {"note": 70, "step": 14, "dur": 1, "vel": 92},
+    {"note": 68, "step": 15, "dur": 1, "vel": 88},
+    {"note": 66, "step": 16, "dur": 2, "vel": 96},
+    {"note": 68, "step": 18, "dur": 1, "vel": 92},
+    {"note": 70, "step": 19, "dur": 1, "vel": 96},
+    {"note": 71, "step": 20, "dur": 4, "vel": 105}
+  ],
+  "chords": [
+    {"notes": [41, 46, 48, 53], "step": 0,  "dur": 4},
+    {"notes": [43, 48, 50, 55], "step": 4,  "dur": 4},
+    {"notes": [45, 50, 52, 57], "step": 8,  "dur": 4},
+    {"notes": [48, 53, 55, 60], "step": 12, "dur": 4},
+    {"notes": [41, 46, 48, 53], "step": 16, "dur": 4},
+    {"notes": [43, 48, 50, 55], "step": 20, "dur": 4}
+  ],
+  "notes": "Original Punjabi-flavored toori hook in F minor pentatonic (that dramatic desi-pop key). Bouncy 96 BPM, catchy repeating hook with a rising finish. Chords: Fm - Fb/G - Ab - Bb (a driving i-iv-flavored loop). Use a FLEX with a flute/synth lead patch for the melody, and keep it on top of the punjabi-banger beat (duck the drums, raise the lead)."
+}

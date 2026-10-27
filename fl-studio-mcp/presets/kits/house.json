@@ -1,0 +1,152 @@
+{
+  "id": "house",
+  "variant": 0,
+  "source": "FL Studio bundled packs (Packs/Drums, Packs/Drums (ModeAudio)); the default 808 kit is excluded",
+  "status": "auto-picked by measured features + genre rules; convention, not auditioned",
+  "roles": {
+    "kick": {
+      "file": "Drums (ModeAudio)/Kicks/HouseGen Kick 13.wv",
+      "flavour": "kick_punch",
+      "part": "kick",
+      "channel": "Kick HOUSE",
+      "features": {
+        "cen": 69.9,
+        "click": 0.0132,
+        "dur": 0.307,
+        "low": 0.976,
+        "peak": 1.006
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Kicks/HouseGen Kick 14.wv",
+        "Drums (ModeAudio)/Kicks/HouseGen Kick 07.wv",
+        "Drums (ModeAudio)/Kicks/HouseGen Kick 02.wv"
+      ]
+    },
+    "snare": {
+      "file": "Drums (ModeAudio)/Snares/HouseGen Snare 19.wv",
+      "flavour": "snare_soft",
+      "part": "snare",
+      "channel": "Snare HOUSE",
+      "features": {
+        "cen": 1479.0,
+        "click": 0.3942,
+        "dur": 0.245,
+        "low": 0.0,
+        "peak": 1.252
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Snares/HouseGen Snare 08.wv",
+        "Drums (ModeAudio)/Snares/HouseGen Snare 27.wv",
+        "Drums (ModeAudio)/Snares/HouseGen Snare 22.wv"
+      ]
+    },
+    "clap": {
+      "file": "Drums (ModeAudio)/Claps/HouseGen Clap 08.wv",
+      "flavour": "clap",
+      "part": "clap",
+      "channel": "Clap HOUSE",
+      "features": {
+        "cen": 2305.9,
+        "click": 0.8917,
+        "dur": 0.343,
+        "low": 0.0,
+        "peak": 1.193
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Claps/HouseGen Clap 02.wv",
+        "Drums (ModeAudio)/Claps/HouseGen Clap 09.wv",
+        "Drums (ModeAudio)/Claps/HouseGen Clap 03.wv"
+      ]
+    },
+    "hat": {
+      "file": "Drums (ModeAudio)/Hi Hats/HouseGen CHat 13.wv",
+      "flavour": "hat_tight",
+      "part": "hat",
+      "channel": "Hat HOUSE",
+      "features": {
+        "cen": 5757.2,
+        "click": 0.9678,
+        "dur": 0.067,
+        "low": 0.0,
+        "peak": 1.318
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/HouseGen CHat 04.wv",
+        "Drums (ModeAudio)/Hi Hats/HouseGen CHat 01.wv",
+        "Drums (ModeAudio)/Hi Hats/HouseGen CHat 11.wv"
+      ]
+    },
+    "ohat": {
+      "file": "Drums (ModeAudio)/Hi Hats/HouseGen OHat 15.wv",
+      "flavour": "ohat",
+      "part": null,
+      "channel": "Open Hat HOUSE",
+      "features": {
+        "cen": 6694.4,
+        "click": 0.9982,
+        "dur": 0.407,
+        "low": 0.0,
+        "peak": 1.34
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Hi Hats/HouseGen OHat 10.wv",
+        "Drums (ModeAudio)/Hi Hats/HouseGen OHat 04.wv",
+        "Drums (ModeAudio)/Hi Hats/HouseGen OHat 08.wv"
+      ],
+      "pattern": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "shaker": {
+      "file": "Drums (ModeAudio)/Shakers/HouseGen Shaker 08.wv",
+      "flavour": "shaker",
+      "part": null,
+      "channel": "Shaker HOUSE",
+      "features": {
+        "cen": 4213.3,
+        "click": 0.9814,
+        "dur": 0.352,
+        "low": 0.0,
+        "peak": 1.146
+      },
+      "alternatives": [
+        "Drums (ModeAudio)/Shakers/HouseGen Shaker 09.wv",
+        "Drums (ModeAudio)/Shakers/HouseGen Shaker 07.wv",
+        "Drums (ModeAudio)/Shakers/HouseGen Shaker 06.wv"
+      ],
+      "pattern": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

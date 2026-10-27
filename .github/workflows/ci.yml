@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    # FL-facing code is mocked in the tests, but the screen/OCR code targets macOS.
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: fl-studio-mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: brew install ffmpeg
+        working-directory: .
+      - run: uv sync --extra dev
+      - run: uv run ruff check .
+      - run: uv run pytest -q
+      - run: uv build

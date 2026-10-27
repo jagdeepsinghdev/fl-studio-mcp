@@ -1,0 +1,35 @@
+{
+ "plugin": "Emphasizer",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Input gain",
+   "value_string": "0.0 dB"
+  },
+  {
+   "index": 1,
+   "name": "Emphasis",
+   "value_string": "50%"
+  },
+  {
+   "index": 2,
+   "name": "Clipping",
+   "value_string": "Hard"
+  },
+  {
+   "index": 3,
+   "name": "Level matching",
+   "value_string": "Off"
+  },
+  {
+   "index": 4,
+   "name": "Bypass",
+   "value_string": "Off"
+  },
+  {
+   "index": 5,
+   "name": "Output gain",
+   "value_string": "0.0 dB"
+  }
+ ]
+}

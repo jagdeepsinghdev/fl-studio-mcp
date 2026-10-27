@@ -1,0 +1,95 @@
+{
+ "plugin": "Fruity Limiter",
+ "knobs": [
+  {
+   "index": 0,
+   "name": "Gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 1,
+   "name": "Soft saturation threshold",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 2,
+   "name": "Limiter ceiling",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 3,
+   "name": "Limiter attack time",
+   "value_string": "2.00ms"
+  },
+  {
+   "index": 4,
+   "name": "Limiter attack curve",
+   "value_string": "3"
+  },
+  {
+   "index": 5,
+   "name": "Limiter release time",
+   "value_string": "85.53ms"
+  },
+  {
+   "index": 6,
+   "name": "Limiter release curve",
+   "value_string": "3"
+  },
+  {
+   "index": 7,
+   "name": "Limiter peak window",
+   "value_string": "10.00ms"
+  },
+  {
+   "index": 8,
+   "name": "Comp threshold",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 9,
+   "name": "Comp ratio",
+   "value_string": "1:1.0"
+  },
+  {
+   "index": 10,
+   "name": "Comp knee",
+   "value_string": "0%"
+  },
+  {
+   "index": 11,
+   "name": "Comp attack time",
+   "value_string": "0.00ms"
+  },
+  {
+   "index": 12,
+   "name": "Comp release time",
+   "value_string": "248.22ms"
+  },
+  {
+   "index": 13,
+   "name": "Comp curve",
+   "value_string": ""
+  },
+  {
+   "index": 14,
+   "name": "Comp RMS window",
+   "value_string": "1.00ms"
+  },
+  {
+   "index": 15,
+   "name": "Noise gain",
+   "value_string": "0.0dB"
+  },
+  {
+   "index": 16,
+   "name": "Noise threshold",
+   "value_string": "-InfdB"
+  },
+  {
+   "index": 17,
+   "name": "Noise release time",
+   "value_string": "50.01ms"
+  }
+ ]
+}
