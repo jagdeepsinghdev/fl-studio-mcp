@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fl-mcp"
+name = "mcp-flstudio"
 version = "0.1.0"
 description = "MCP server for controlling FL Studio - mixer, transport, channels, plugins, and piano roll"
 readme = "README.md"
@@ -48,7 +48,7 @@ dev = [
 ]
 
 [project.scripts]
-fl-mcp = "fl_studio_mcp.server:main"
+mcp-flstudio = "fl_studio_mcp.server:main"
 fl-studio-mcp = "fl_studio_mcp.server:main"
 
 [tool.hatch.build.targets.wheel]

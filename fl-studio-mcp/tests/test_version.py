@@ -31,7 +31,7 @@ def test_registry_metadata_matches_the_package():
     v = _pyproject_version()
     assert sj["version"] == v
     pkg = sj["packages"][0]
-    assert pkg["registryType"] == "pypi" and pkg["identifier"] == "fl-mcp" and pkg["version"] == v
+    assert pkg["registryType"] == "pypi" and pkg["identifier"] == "mcp-flstudio" and pkg["version"] == v
     assert len(sj["description"]) <= 100
     readme = (ROOT / "fl-studio-mcp" / "README.md").read_text()
     assert f"mcp-name: {sj['name']}" in readme
