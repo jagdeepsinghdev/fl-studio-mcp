@@ -102,6 +102,8 @@ def test_add_effect_reports_plugin_that_landed_on_wrong_track(monkeypatch):
     panel's track). add_effect must name the stray, not just 'nothing'."""
     from fl_studio_mcp.utils import add_effect as ae
     slots = {7: ["Fruity Compressor"] + [""] * 9, 8: [""] * 10}
+    monkeypatch.setattr("fl_studio_mcp.utils.ui_guard.ensure_ready",
+                        lambda conn, **k: {"ready": True, "blockers": [], "front": None})
     monkeypatch.setattr(ae.cm, "require_fl_front", lambda: True)
     monkeypatch.setattr(ae, "track_slots", lambda conn, t: list(slots[t]))
     monkeypatch.setattr(ae, "selected_track", lambda conn: 7)

@@ -18,6 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"   # pin: the runner's Homebrew Python is newer than we support
       - run: brew install ffmpeg
         working-directory: .
       - run: uv sync --extra dev

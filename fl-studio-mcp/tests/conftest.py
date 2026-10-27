@@ -50,4 +50,18 @@ def _isolate_from_live_fl(tmp_path, monkeypatch):
     monkeypatch.setattr(fl_trigger.FLStudioTrigger, "_trigger_windows",
                         lambda self: True)
     monkeypatch.setattr(fl_trigger, "_trigger", None)
+
+    # 2026-10-26: a test called the real ui_guard.ensure_ready, which focused the
+    # user's FL window on every run and failed in CI (no FL there). Readiness and
+    # focus must be mocked by the test that needs them; the real ones refuse.
+    from fl_studio_mcp.utils import custom_menu, ui_guard
+
+    def _refuse(name):
+        def _f(*a, **k):
+            raise AssertionError(f"test called the real {name}: mock it (tests/conftest.py)")
+        return _f
+
+    monkeypatch.setattr(ui_guard, "ensure_ready", _refuse("ui_guard.ensure_ready"))
+    monkeypatch.setattr(custom_menu, "focus_fl", _refuse("custom_menu.focus_fl"))
+    monkeypatch.setattr(custom_menu, "require_fl_front", _refuse("custom_menu.require_fl_front"))
     yield
