@@ -256,10 +256,17 @@ Then in FL: **Hardware → FLStudioMCP → enable**. Bridge troubleshooting: `sk
 ---
 
 ## 7. Current state / known limits
-- **FL is Producer Edition** (v26.1.6, licensed 2026-10; was a Trial before) — saved projects reopen; the `ui` key-event tier works (CLAUDE.md §5).
-- **Swing** is a single global setting: `fl_transport(action="set_swing")` (0.0-1.0; the getter is legacy `fl_get_swing`, `LEGACY_TOOLS=1`).
-- **Not possible via the API** (verified against FL 2026.1.6): placing pattern clips on the playlist, loading plugins/samples, rendering audio, and deleting/renaming/positioning-readback of markers (markers can be *added* and listed).
-- **Melody landing** requires the one ComposeWithLLM click (§5).
+- **Tested with** FL Studio 2026 (v26.1.6) **Producer Edition** on macOS. Other editions may lack
+  features the UI automation relies on (for example saving projects, or the in-engine key events).
+- **Swing** is one global setting: `fl_transport(action="set_swing")` (0.0-1.0).
+- **Not possible through FL's scripting API** (verified against FL 2026.1.6): placing pattern clips
+  on the playlist, so songs are built one pattern per section, not as an arrangement. Markers can
+  be added and listed, not deleted, renamed or read back by position.
+- **Done through the UI instead of the API** (macOS only, so FL must be in front and the mouse
+  left alone while they run): adding instruments and effects (`fl_channel add`, `fl_mixer add_fx`),
+  loading samples (`fl_channel load_sample`), exporting audio (`fl_file export`), and selecting the
+  piano-roll script. The script selection resets on every FL launch and is redone automatically
+  on the first note write (§5).
 
 ---
 
