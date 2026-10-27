@@ -1,78 +1,58 @@
 <!-- mcp-name: io.github.jagdeepsinghdev/fl-studio-mcp -->
-# FL Studio MCP Server (Extended Fork)
+# FL Studio MCP Server
 
-An MCP (Model Context Protocol) server that enables AI assistants to control FL Studio through MIDI communication and Piano Roll scripts.
+An [MCP](https://modelcontextprotocol.io) server that lets an AI assistant control **FL Studio**: transport,
+mixer, channels, patterns, the piano roll, plugins, presets, genre packs, vocal chains and audio files.
+It runs locally next to FL Studio (stdio) and talks to it through FL's own Python scripting API over
+virtual MIDI ports, plus, on macOS, the screen and keyboard for the things the API cannot do.
 
 > **Fork of [karl-andres/fl-studio-mcp](https://github.com/karl-andres/fl-studio-mcp), with thanks.** The original provided the transport/mixer/channel/plugin/piano-roll foundation (MIT license, retained). This fork extends it: session-safe note writing (roll handshake + title OCR), full pattern/channel/file management, in-engine UI automation, one-call track/song building, and a request-id protocol with audit + controller rollback.
 
-### Quick Demo (from the original project)
-dont mind the scuffed audio, i had to clip with my mic bc apple wouldnt let me record desktop audio lol
-
-https://github.com/user-attachments/assets/d4fc668f-9fe5-4ab4-9f18-76cd661029c6
-
-### Original Audio
-If you wanted to hear the better audio
-
-https://github.com/user-attachments/assets/c2b1a5e7-1640-41fa-82bc-18ca7cbae9e8
+> **Status: alpha.** Built and tested on **macOS** with **FL Studio 2026 Producer Edition**. Windows is
+> untested beyond the original tools. See the [project page](https://github.com/jagdeepsinghdev/fl-studio-mcp) for releases and the changelog.
 
 ## Features
 
-### Transport Control
+29 tools, each with several actions (`fl_help(domain)` prints the parameters of one). Highlights:
 
-- Play, pause, stop playback
-- Toggle recording
-- Set playback position
-- Get song length and position
-- Control loop mode (pattern/song)
-- Adjust playback speed
-
-### Mixer Control
-
-- Get/set track volume and pan
-- Mute/solo tracks
-- Arm tracks for recording
-- Set track names and colors
-- Stereo separation control
-
-### Channel Rack Control
-
-- List all channels
-- Get/set channel properties (volume, pan, name, color)
-- Mute/solo channels
-- Route channels to mixer tracks
-- Trigger MIDI notes in real-time
-- Step sequencer control (get/set grid bits)
-
-### Plugin Control
-
-- List plugin parameters
-- Get/set parameter values
-- Navigate presets (next/previous)
-- Query plugin info
-
-### Piano Roll Control
-
-- **Add notes** to the piano roll with precise timing
-- **Add chords** with a single command
-- **Delete specific notes** by MIDI number and time
-- **Clear all notes** from the piano roll
-- **Read piano roll state** to see all existing notes
-- Auto-triggering via keystroke (Cmd+Opt+Y on macOS, Ctrl+Alt+Y on Windows)
+- **Transport and mixer**: play/stop/record, tempo, time signature, swing, loop; volume, pan, sends,
+  routing, effects, peak meters, automatic clipping fix.
+- **Channels and patterns**: list, add instruments, clone, group, rename, route; create, clone,
+  select and resize patterns; step-sequencer rows with per-step velocity/pitch/pan.
+- **Piano roll, safely**: notes and chords from text (`"Am F C G"`), melodies as note tokens, MIDI import,
+  capture of what you played. Every write first proves which roll is open by reading its on-screen title.
+- **Plugins and presets**: list and set parameters, load presets by name, built-in echo/reverb/chorus;
+  JSON beat and melody presets (drop in a file, no code).
+- **One-call setups**: 16 genre packs with drum kits (`fl_genre`), a vocal chain with buses and sends
+  (`fl_vocal`), a whole song folder (`fl_preset load_song`), multi-step recipes with undo (`fl_recipe`).
+- **Audio files** (`fl_audio`): tempo, key, chords and 808 root note; cut a section, isolate left/right,
+  load into a new Sampler.
+- **Seeing and recovering**: `fl_screen` (OCR), FL's own keyboard shortcuts (`fl_shortcut`),
+  `fl_connect` `doctor` / `recover` / `tidy` when FL gets stuck.
+- **Optional Claude skills** with FL workflows and a music-theory knowledge base (see [Skills](#skills-optional)).
 
 ## Important Limitations
 
-### Cannot Load Plugins
-
-The FL Studio scripting API does **not** support loading new VST/AU plugins. You can only control parameters of plugins that are already loaded in your project.
-
-### Patterns
-
-Patterns **can** be created and managed: `fl_create_pattern`, `fl_list_patterns`, `fl_select_pattern`, `fl_clone_pattern`. Never jump onto an *empty* pattern by other means: FL opens a modal "Pattern N name" dialog that blocks the controller until a human closes it. Not possible: placing patterns on the playlist (no playlist-clip API); use `fl_add_marker` to label sections on the timeline instead.
+- **macOS-only UI automation.** Adding instruments and effects, loading samples, exporting audio and
+  selecting the piano-roll script are done by driving FL's menus (OCR, System Events), because FL's
+  scripting API cannot do them. FL must be in front and the mouse left alone while they run.
+  Needs Accessibility and Screen Recording permission.
+- **No playlist clips.** The API cannot place patterns on the playlist, so songs are built one pattern per
+  section. Markers can be added and listed, not deleted or renamed.
+- **Never jump onto an *empty* pattern by other means** than `fl_pattern(action="select")`: FL opens a
+  modal "Pattern N name" dialog that blocks the controller until a human closes it. `fl_pattern create`
+  names the next free slot without jumping.
+- **The piano-roll script selection resets on every FL launch.** The server redoes it automatically on
+  the first note write (`fl_select_script` is the manual call).
+- **One call at a time.** The server and FL share one command/response file pair; never run two FL tool
+  calls in parallel.
+- FL Studio itself is not included, and other editions may lack features the automation relies on.
 
 ## Requirements
 
 - **FL Studio 20.7+** (MIDI Controller Scripting API)
 - **Python 3.10+**
+- **ffmpeg** on your PATH (`brew install ffmpeg`), used by `fl_audio` and the sample tools
 - **macOS** or **Windows**
   - macOS: IAC Driver (built-in, needs to be enabled)
   - Windows: [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
@@ -137,7 +117,7 @@ Both installers will:
 5. Install the Piano Roll script (ComposeWithLLM)
 6. Configure Claude Desktop or Claude Code automatically (`scripts/install_mcp_for_claude.sh` / `scripts/install_mcp_for_claude.ps1`)
 
-> **Windows piano-roll auto-trigger note:** the Piano Roll script is launched by sending FL Studio a keystroke (`Ctrl+Alt+Y`). On Windows this requires briefly foregrounding the FL Studio window, so **FL Studio will pop to the front for a moment** each time a tool like `fl_send_notes` runs. This is expected. See [Piano Roll script not triggering](#piano-roll-script-not-triggering) if it doesn't fire at all.
+> **Windows piano-roll auto-trigger note:** the Piano Roll script is launched by sending FL Studio a keystroke (`Ctrl+Alt+Y`). On Windows this requires briefly foregrounding the FL Studio window, so **FL Studio will pop to the front for a moment** each time a note-writing tool runs. This is expected. See [Piano Roll script not triggering](#piano-roll-script-not-triggering) if it doesn't fire at all.
 
 ## Manual Installation
 
@@ -244,7 +224,7 @@ Using a different MCP-compatible client (Gemini, an OpenAI-based tool, Cursor, e
 ### Skills (optional)
 
 The server is complete without them. The repo also ships an **optional** skill pack for Claude
-in [`../skills/`](../skills/README.md): FL workflows and gotchas (setup, patterns, piano roll,
+in [`skills/`](https://github.com/jagdeepsinghdev/fl-studio-mcp/blob/main/skills/README.md): FL workflows and gotchas (setup, patterns, piano roll,
 mixing, plugins, genres, whole-song building) and a standalone **music-theory** skill (harmony,
 rhythm, 808 writing, form, ragas, ear training). None are installed by default. Pick them by name:
 
@@ -253,181 +233,87 @@ rhythm, 808 writing, form, ragas, ear training). None are installed by default. 
 ../skills/install.sh fl-studio fl-melody music-theory   # -> ~/.claude/skills (symlinks)
 ```
 
-The table in [`skills/README.md`](../skills/README.md) says what each one adds and when to install it.
+The table in [`skills/README.md`](https://github.com/jagdeepsinghdev/fl-studio-mcp/blob/main/skills/README.md) says what each one adds and when to install it.
 
 ## Usage
 
-### Running the Server Manually
+### Running the server manually
 
 ```bash
-# Using uv
-uv run fl-studio-mcp
-
-# Or after installation
-fl-studio-mcp
+uv run fl-studio-mcp        # from this folder; MCP clients normally start it for you
 ```
 
-### Piano Roll Workflow
+### Writing notes
 
-1. Open FL Studio and select a channel
-2. Open the Piano Roll (F7 or double-click the channel)
-3. The first time, manually run the script: **Tools > Scripting > ComposeWithLLM**
-4. After that, the MCP tools will auto-trigger the script
+Ask for notes in plain words ("a minor 4-bar hook on the piano channel"). The server selects the right
+piano-roll script once per FL launch, opens the target channel's roll, checks the roll title on screen,
+writes the notes, and reads them back. If notes do not land, see
+[Troubleshooting](#piano-roll-script-not-triggering).
 
 ## Available Tools
 
-### Connection
+Every domain tool takes an `action`; `fl_help(domain)` shows its parameters. The full generated list of
+tools, skills and presets is in [`INVENTORY.md`]({R}/blob/main/INVENTORY.md).
 
-| Tool | Description |
-|------|-------------|
-| `fl_connect` | Connect/reconnect to FL Studio |
-| `fl_connection_status` | Get connection status |
+| Tool | What it does |
+|---|---|
+| `fl_state` | read-only snapshot: tempo, transport, patterns, channels, selected channel, piano-roll notes |
+| `fl_transport` | `play`, `stop`, `record`, `set_bpm`, `set_timesig`, `set_speed`, `set_swing`, `loop`, `position` |
+| `fl_mixer` | `set_vol`, `set_pan`, `route`, `sends`, `add_fx`, `get_info`, `get_sends`, `get_peaks`, `fix_clipping`, `get_eq`, `set_eq` |
+| `fl_channel` | `list`, `add`, `clone`, `group`, `rename`, `route`, `mute`, `solo`, `set_vol`, `set_pan`, `set_steps`, `get_steps`, `get_step_param`, `set_step_param`, `load_sample` |
+| `fl_pattern` | `create`, `select`, `rename`, `set_len`, `clone`, `chain` |
+| `fl_notes` | `write_steps`, `write_chords`, `read_steps`, `clear`, `clear_queue`, `import_midi`, `capture` |
+| `fl_select_script` | select the piano-roll script (automatic on the first note write) |
+| `fl_plugin` | `list_params`, `set_param`, `load_preset`, `echo`, `reverb`, `chorus`, `get_fx` |
+| `fl_preset` | `list`, `load_beat`, `load_melody`, `load_song` |
+| `fl_genre` | `list`, `show`, `load`, `load_kit`: one call per genre |
+| `fl_vocal` | `setup`, `apply`, `buses`, `loudness`, `recipes`, `show`, `status`, `learn`, `run`, `onboard` |
+| `fl_audio` | `analyze`, `extract`, `split`, `load`, `recorder` (needs `ffmpeg`) |
+| `fl_recipe` | `validate`, `plan`, `apply`, `status`, `undo`, `export` |
+| `fl_file` | `save`, `save_as`, `export`, `open` |
+| `fl_delete` | destructive: `channel`, `pattern`, `pattern_data`, `fx`, `roll_notes` |
+| `fl_batch` | many controller actions in one MIDI round trip |
+| `fl_connect` | FL lifecycle: `status`, `open`, `close`, `save`, `force`, `dismiss_modal`, `doctor`, `recover`, `tidy` |
+| `fl_screen` / `fl_shortcut` | see the screen (`look`, `ocr`, `find`, `hint`, `click_text`) / press FL's own shortcuts, guarded |
+| `fl_launchpad` | 8x8 grid controller to step sequencer |
+| `fl_edison` / `fl_slice_audio` | Edison audio-region flow / slice a file into onset or grid samples |
+| `fl_variations` / `fl_list_generated` | rule-based beat variations / list generated presets |
+| `fl_probe` / `fl_ui_screen` / `fl_ui_script` / `fl_connection_status` / `fl_help` | discovery, allowlisted `ui.*` calls, UI routines, connection check, docs |
 
-### Transport
-
-| Tool | Description |
-|------|-------------|
-| `fl_play` | Start/pause playback |
-| `fl_stop` | Stop playback |
-| `fl_record` | Toggle recording |
-| `fl_get_transport_status` | Get playback/recording state |
-| `fl_set_song_position` | Set playback position |
-| `fl_get_song_length` | Get song duration |
-| `fl_set_loop_mode` | Switch between pattern/song mode |
-| `fl_set_playback_speed` | Adjust playback speed (0.25x-4x) |
-| `fl_get_swing` / `fl_set_swing` | Global swing, 0.0-1.0 (one project-wide setting) |
-
-### Mixer
-
-| Tool | Description |
-|------|-------------|
-| `fl_get_mixer_track_count` | Get number of mixer tracks |
-| `fl_get_mixer_track_info` | Get track details |
-| `fl_get_all_mixer_tracks` | List all tracks |
-| `fl_set_track_volume` | Set track volume |
-| `fl_set_track_pan` | Set track pan |
-| `fl_mute_track` | Mute/unmute track |
-| `fl_solo_track` | Solo/unsolo track |
-| `fl_arm_track` | Arm track for recording |
-| `fl_set_track_name` | Rename track |
-| `fl_set_track_color` | Set track color |
-| `fl_set_stereo_separation` | Adjust stereo width |
-| `fl_get_sends` | List a track's active routes and levels |
-| `fl_set_send_level` | Set (and enable) the send level to another track |
-
-### Channels
-
-| Tool | Description |
-|------|-------------|
-| `fl_get_channel_count` | Get number of channels |
-| `fl_get_channel_info` | Get channel details |
-| `fl_get_all_channels` | List all channels |
-| `fl_get_selected_channel` | Get selected channel |
-| `fl_select_channel` | Select/deselect channel |
-| `fl_select_one_channel` | Select channel exclusively |
-| `fl_trigger_note` | Trigger MIDI note (real-time) |
-| `fl_set_channel_volume` | Set channel volume |
-| `fl_set_channel_pan` | Set channel pan |
-| `fl_mute_channel` | Mute/unmute channel |
-| `fl_solo_channel` | Solo/unsolo channel |
-| `fl_set_channel_name` | Rename channel |
-| `fl_set_channel_color` | Set channel color |
-| `fl_route_channel_to_mixer` | Route to mixer track |
-| `fl_get_grid_bit` | Get step sequencer step |
-| `fl_set_grid_bit` | Set step sequencer step |
-| `fl_get_step_sequence` | Get full pattern |
-| `fl_set_step_sequence` | Set full pattern |
-
-### Patterns
-
-| Tool | Description |
-|------|-------------|
-| `fl_list_patterns` | List created patterns (number, name, length) and the active one |
-| `fl_create_pattern` | Create a named pattern in the first free slot (does not select it) |
-| `fl_select_pattern` | Make an existing pattern active |
-| `fl_clone_pattern` | Clone a pattern into the next slot; later patterns shift up |
-
-### Markers
-
-| Tool | Description |
-|------|-------------|
-| `fl_add_marker` | Add a named timeline marker at a beat position (add-only) |
-| `fl_list_markers` | List marker names in time order |
-
-### Plugins
-
-| Tool | Description |
-|------|-------------|
-| `fl_is_plugin_valid` | Check if plugin exists |
-| `fl_get_plugin_name` | Get plugin name |
-| `fl_get_plugin_param_count` | Get parameter count |
-| `fl_get_plugin_params` | List all parameters |
-| `fl_get_plugin_param_value` | Get parameter value |
-| `fl_set_plugin_param_value` | Set parameter value |
-| `fl_get_preset_count` | Get preset count |
-| `fl_next_preset` | Next preset |
-| `fl_prev_preset` | Previous preset |
-| `fl_get_plugin_color` | Get plugin color |
-
-### Piano Roll
-
-| Tool | Description |
-|------|-------------|
-| `fl_send_notes` | Add notes to the piano roll (`target_pattern` selects the pattern first) |
-| `fl_send_chord` | Add a chord (multiple notes at same time; supports `target_pattern`) |
-| `fl_delete_notes` | Delete specific notes |
-| `fl_clear_piano_roll` | Clear all notes |
-| `fl_get_piano_roll_state` | Read current piano roll notes |
-| `fl_trigger_script` | Manually trigger the FL Studio script |
-| `fl_get_piano_roll_info` | Get piano roll system info |
-| `fl_clear_request_queue` | Cancel pending queued changes |
-
-### Song builder (only the numbers change)
-
-Agent guide: [`AGENT-SONG-BUILDER.md`](AGENT-SONG-BUILDER.md) · skill: `skills/fl-song-builder` · a whole analysed song in one call: [`docs/SONG-TO-FL.md`](docs/SONG-TO-FL.md).
-
-| Tool | Description |
-|------|-------------|
-| `fl_build_track` | Tempo + pattern length + drums + melody in one call (`melody_channel_index` addresses by index) |
-| `fl_write_drums` | Multi-bar drum rows from step numbers; a shorter per-bar list is a cycle repeated to fill `bars` |
-| `fl_clean_drums` | Clear kick/snare/hat/clap for `bars` in a pattern |
-| `fl_write_melody` | Notes by name per bar (chords as lists, `"-"` rest, `"~"` hold); `bars=N` cycles, `channel_index` addresses by index |
-| `fl_write_notes_file` | Queue a large `{midi,time,duration,velocity}` JSON list into one channel (no pasting) |
-| `fl_find_preset` / `fl_list_preset_names` | Find/list a plugin preset by name (steps presets, reads the channel name; changes the preset while scanning) |
-| `fl_write_808_slides` | 808 line with FL slide notes |
-
-The Piano Roll script applies queued notes to the roll that is OPEN, not the selected channel: do the roll handshake (`CLAUDE.md` rule 6b, `skills/fl-melody`) before writing.
+The older single-purpose tools (`fl_play`, `fl_set_bpm`, `fl_send_notes`, ...) are **legacy**: they are
+registered only with `LEGACY_TOOLS=1`.
 
 ## Example Workflows
 
-### Adjusting a Mix
+Say these to your assistant; the tool calls are what it runs.
 
-```text
-"Set the volume of mixer track 1 to 80% and pan it slightly left"
+**A beat and a hook in one go**
+```
+fl_genre(action="load", genre="trap")                      # tempo, kit, beat, Keys + Bass, chords, levels
+fl_notes(action="write_chords", text="Am F C G", channel_index=5)
 ```
 
-### Creating a Drum Pattern
-
-```text
-"Create a basic kick pattern on channel 0 with kicks on steps 0, 4, 8, and 12"
+**Drums by hand**
+```
+fl_pattern(action="set_len", pattern=1, beats=4)
+fl_channel(action="set_steps", index=0, steps=[1,0,0,0, 1,0,0,0, 1,0,0,0, 1,0,0,0])
 ```
 
-### Adding a Melody to Piano Roll
-
-```text
-"Add a C major arpeggio starting at beat 0: C4, E4, G4, C5 - each note quarter duration"
+**A melody on a new instrument**
+```
+fl_channel(action="add", plugin="FLEX", name="Piano")
+fl_notes(action="write_steps", channel_index=<piano idx>, melody=[["C4","E4","G4","E4"]])
 ```
 
-### Adding Chords
-
-```text
-"Add a C major chord at beat 0, then F major at beat 2, then G major at beat 4"
+**Mix check**
+```
+fl_mixer(action="get_peaks", track=0)
+fl_mixer(action="fix_clipping")      # lowers the master fader just enough
 ```
 
-### Automating Plugin Parameters
-
-```text
-"List the parameters of the plugin on channel 0 and set the filter cutoff to 50%"
+**Know a sample before you use it**
+```
+fl_audio(action="analyze", path="loop.wav")    # tempo (+ whether the estimators agree), key, chords, root
 ```
 
 ## Troubleshooting
@@ -449,7 +335,7 @@ The Piano Roll script applies queued notes to the roll that is OPEN, not the sel
 
 ### Piano Roll script not triggering
 
-1. First time: manually run **Tools > Scripting > ComposeWithLLM** in FL Studio
+1. The server selects the script itself on the first note write after each FL launch. If notes still do not land, run `fl_select_script(channel_index=N)` and check `fl_state` shows the channel's notes
 2. On macOS: grant Accessibility permissions when prompted
 3. On Windows: the MCP server foregrounds the FL Studio window automatically before sending the hotkey — if FL Studio isn't running or is minimized to the system tray, the trigger can't find it and will fall back to a warning telling you to press the hotkey manually
 4. Try pressing Cmd+Opt+Y (macOS) or Ctrl+Alt+Y (Windows) manually to confirm the hotkey itself is bound to the script in FL Studio
@@ -529,35 +415,27 @@ pip install -e ".[dev]"
 
 ```
 fl-studio-mcp/
-├── fl_controller/
-│   └── device_FLStudioMCP.py    # FL Studio MIDI controller script (runs inside FL Studio)
-├── scripts/
-│   ├── setup.sh                  # FL Studio script installer
-│   ├── install_mcp_for_claude.sh # Claude config installer (macOS/Linux)
-│   ├── install_mcp_for_claude.ps1 # Claude config installer (Windows)
-│   └── ComposeWithLLM.pyscript   # Piano Roll script (runs inside FL Studio)
 ├── src/fl_studio_mcp/
-│   ├── server.py                # FastMCP server entry point
-│   ├── tools/                   # MCP tool implementations
-│   │   ├── channels.py
-│   │   ├── mixer.py
-│   │   ├── piano_roll.py
-│   │   ├── plugins.py
-│   │   ├── song_builder.py      # fl_build_track / fl_write_drums / fl_write_melody / fl_clean_drums / fl_write_notes_file
-│   │   └── transport.py
-│   └── utils/
-│       ├── connection.py        # FL Studio connection wrapper
-│       ├── fl_trigger.py        # Piano roll keystroke trigger
-│       └── midi_connection.py   # MIDI + JSON communication layer
-├── install.sh                   # One-command installer (macOS/Linux)
-└── install.ps1                  # One-command installer (Windows)
+│   ├── server.py          # FastMCP entry point, registers the tools
+│   ├── tools/             # one module per domain tool (transport_v2.py, mixer_v2.py, notes_v2.py, ...)
+│   ├── audio/             # numpy tempo/key/chord analysis, slicer
+│   └── utils/             # connection, UI automation, roll session, loaders
+├── fl_controller/         # runs INSIDE FL: device_FLStudioMCP.py, fl_midi_loop.py (macOS MIDI ports)
+├── scripts/               # setup.sh, install-midi-loop.sh, install_mcp_for_claude.*, ComposeWithLLM.pyscript
+├── presets/               # beats, melodies, genres, kits, vocal (JSON; drop in a file, no code)
+├── recipes/ shortcuts/ ui_routines/ docs/ tests/
+└── install.sh / install.ps1
 ```
+
+The repository root also has the optional `skills/`, `CHANGELOG.md`, `INVENTORY.md` and the CI/release
+workflows: see the [project page](https://github.com/jagdeepsinghdev/fl-studio-mcp).
 
 ## Credits
 
 This project is a fork of, and builds directly on:
 
 - **[karl-andres/fl-studio-mcp](https://github.com/karl-andres/fl-studio-mcp)** (MIT) by Karl Andres — the original FL Studio MCP server: transport, mixer, channel, plugin and piano-roll tools, the MIDI controller script, and the ComposeWithLLM piano-roll integration. Thanks for the foundation!
+- The original project's demo video: see [its README](https://github.com/karl-andres/fl-studio-mcp#readme).
 - [calvinw/fl-studio-mcp](https://github.com/calvinw/fl-studio-mcp) — upstream reference the original is based on (Piano Roll integration approach)
 
 Other dependencies:
