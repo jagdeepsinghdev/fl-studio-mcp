@@ -570,16 +570,7 @@ server = [
 ]
 
 [[package]]
-name = "fl-studio-api-stubs"
-version = "37.0.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/93/e7/c470761a5ba476dc3365876780685d9873ac3d7ec77b7dc7422b3e1388f3/fl_studio_api_stubs-37.0.1.tar.gz", hash = "sha256:e1f3e94d4d115fb2089804ad18166bb6b76dcd54ecd7548f77d6f2af29d5b0b4", size = 93873, upload-time = "2024-08-07T07:06:50.818Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/df/c4/a6f05ea624928dbb263e3e500a30679b885429f6146645f0065656943810/fl_studio_api_stubs-37.0.1-py3-none-any.whl", hash = "sha256:34725b81859edd3d424aa74f0673c1874b26bee33af32c513189792fed2cd1b7", size = 129254, upload-time = "2024-08-07T07:06:47.886Z" },
-]
-
-[[package]]
-name = "fl-studio-mcp"
+name = "fl-mcp"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
@@ -624,6 +615,15 @@ dev = [
     { name = "fl-studio-api-stubs", specifier = ">=37.0" },
     { name = "pytest", specifier = ">=8.0" },
     { name = "ruff", specifier = ">=0.8" },
+]
+
+[[package]]
+name = "fl-studio-api-stubs"
+version = "37.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/93/e7/c470761a5ba476dc3365876780685d9873ac3d7ec77b7dc7422b3e1388f3/fl_studio_api_stubs-37.0.1.tar.gz", hash = "sha256:e1f3e94d4d115fb2089804ad18166bb6b76dcd54ecd7548f77d6f2af29d5b0b4", size = 93873, upload-time = "2024-08-07T07:06:50.818Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/c4/a6f05ea624928dbb263e3e500a30679b885429f6146645f0065656943810/fl_studio_api_stubs-37.0.1-py3-none-any.whl", hash = "sha256:34725b81859edd3d424aa74f0673c1874b26bee33af32c513189792fed2cd1b7", size = 129254, upload-time = "2024-08-07T07:06:47.886Z" },
 ]
 
 [[package]]

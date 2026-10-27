@@ -28,6 +28,7 @@ First public release: a fork of [karl-andres/fl-studio-mcp](https://github.com/k
   including a standalone music-theory skill.
 - `scripts/install-midi-loop.sh`: macOS LaunchAgent for the virtual MIDI ports.
 - `server.json` + README `mcp-name` line for the official MCP Registry.
+- Published on PyPI as **`fl-mcp`** (`uvx fl-mcp`); the command `fl-studio-mcp` still works.
 
 ### Notes
 - macOS is the supported platform for the UI automation (OCR, System Events). Windows

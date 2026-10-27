@@ -9,7 +9,7 @@
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgrey)
 ![Status](https://img.shields.io/badge/status-alpha-orange)
 <!-- after the first PyPI publish, add:
-[![PyPI](https://img.shields.io/pypi/v/fl-studio-mcp)](https://pypi.org/project/fl-studio-mcp/) -->
+[![PyPI](https://img.shields.io/pypi/v/fl-mcp)](https://pypi.org/project/fl-mcp/) -->
 
 **Control FL Studio from an AI assistant over [MCP](https://modelcontextprotocol.io).** Build beats,
 write melodies into the piano roll, mix, and load samples by talking to Claude; the server drives

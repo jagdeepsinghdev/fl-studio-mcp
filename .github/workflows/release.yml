@@ -40,7 +40,7 @@ jobs:
           files: fl-studio-mcp/dist/*
 
   pypi:
-    # Needs one-time setup: create the project on PyPI with a "trusted publisher"
+    # Needs one-time setup: on PyPI add a pending "trusted publisher" for project fl-mcp
     # (owner jagdeepsinghdev, repo fl-studio-mcp, workflow release.yml, environment pypi),
     # then create a GitHub environment named "pypi". Until then this job just fails;
     # the GitHub Release above is unaffected.
