@@ -114,6 +114,7 @@ def test_add_effect_reports_plugin_that_landed_on_wrong_track(monkeypatch):
         slots[7][1] = "Fruity Reeverb 2"   # drifted onto the panel's track
         return True
     monkeypatch.setattr(ae, "pick_from_picker", pick)
+    monkeypatch.setattr(ae, "close_picker", lambda log: None)
     r = ae.add_effect(8, "Fruity Reeverb 2", conn=object(), log=lambda m: None)
     assert r["ok"] is False
     assert r["stray"] == {"track": 7, "slot": 1, "plugin": "Fruity Reeverb 2"}

@@ -242,7 +242,7 @@ def window_by_name(fragment: str) -> tuple[int, int, int, int] | None:
         '  return "none"\n'
         'end tell')
     _, out, _ = osa(script)
-    if out.startswith("none"):
+    if out.startswith("none") or "," not in out:   # no window, or System Events failed
         return None
     idx, _ = out.split(",", 1)
     script2 = (

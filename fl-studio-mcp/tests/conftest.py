@@ -64,4 +64,21 @@ def _isolate_from_live_fl(tmp_path, monkeypatch):
     monkeypatch.setattr(ui_guard, "ensure_ready", _refuse("ui_guard.ensure_ready"))
     monkeypatch.setattr(custom_menu, "focus_fl", _refuse("custom_menu.focus_fl"))
     monkeypatch.setattr(custom_menu, "require_fl_front", _refuse("custom_menu.require_fl_front"))
+
+    # Nor may a test drive the real screen: AppleScript (System Events clicks/queries),
+    # screenshots or OCR reach the user's live FL locally and fail in CI. ffmpeg, git
+    # and other tools still run.
+    import subprocess
+    _ui_tools = {"osascript", "screencapture", "ocr_text", "cliclick"}
+    for fn_name in ("run", "Popen", "check_output", "call"):
+        real = getattr(subprocess, fn_name)
+
+        def _guard(*a, _real=real, _name=fn_name, **k):
+            cmd = a[0] if a else k.get("args")
+            exe = (cmd if isinstance(cmd, str) else (cmd or [""])[0])
+            if os.path.basename(str(exe).split()[0] if isinstance(cmd, str) else str(exe)) in _ui_tools:
+                raise AssertionError(f"test ran the real {exe!r} via subprocess.{_name}: "
+                                     "mock the UI call (tests/conftest.py)")
+            return _real(*a, **k)
+        monkeypatch.setattr(subprocess, fn_name, _guard)
     yield
