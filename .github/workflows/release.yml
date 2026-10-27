@@ -46,6 +46,9 @@ jobs:
     # (owner jagdeepsinghdev, repo fl-studio-mcp, workflow release.yml, environment pypi),
     # then create a GitHub environment named "pypi". Until then this job just fails;
     # the GitHub Release above is unaffected.
+    # Off until set up: repo Settings > Secrets and variables > Actions > Variables >
+    # PUBLISH_PYPI = true. Without it the release stays green and this job is skipped.
+    if: vars.PUBLISH_PYPI == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment: pypi
